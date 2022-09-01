@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Ball</title>
+</head>
+<body>
+    <h1>Dragon Ball</h1>
+    Insira o nome do guerreiro <input id="in_nome"> <br>
+    Insira o KI normal do guerreiro <input id="in_ki"> <br>
+    <button onclick="ver_ki()">Ver ki em cada forma</button>
+
+</body>
+</html>
+
+
+<script>
+  
+  function ver_ki() {
+   alert  (`Guerreiro ${(in_nome.value)} super Sayajin 1, ki ${Number (in_ki.value) * 50 }`)
+  alert  (`Guerreiro ${(in_nome.value)}, super Sayajin 2, ki ${Number (in_ki.value) * 100 }`)
+ }
+
+</script>

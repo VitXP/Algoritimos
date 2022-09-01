@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneira</title>
+</head>
+<body>
+    <h2>Controle de desperdício de água</h2>
+
+    Insira quantos minutos a Torneira 1 ficou pingando <input type="text" id="in_1"> <br>
+    Insira quantos minutos a Torneira 2 ficou pingando <input type="text" id="in_2"> <br>
+    Insira quantos minutos a Torneira 3 ficou pingando <input id="in_3"> <br>
+ <button onclick="Calcular()"> Calcule o desperdício </button>
+</body>
+</html>
+
+<script>
+
+function Calcular() {
+alert (`Suas 3 torneiras, juntas, desperdiçaram ${(Number (in_1.value)*15) + (Number (in_2.value)*15) + (Number(in_3.value)*15)} litros de água`)
+}
+
+</script>
+

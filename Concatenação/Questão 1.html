@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário</title>
+</head>
+<body>
+    <h2>Diário</h2>
+    
+    Digite sua memória aqui: <input id="in_memoria"><br>
+    <button onclick="registrar()" >Registrar Memória</button>
+    
+    <div id ='registra_memoria'> 
+         <br> Memórias: <br>
+    </div>
+
+</body>
+</html>
+<script> 
+
+ function registrar() {
+    registra_memoria.innerHTML += `${in_memoria.value} <br>`
+    }
+
+</script>

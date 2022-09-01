@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aposentadoria</title>
+</head>
+<body>
+    <h2>Consulte o tempo que falta para se aposentar</h2>
+    
+    Insira sua Idade <input id="in_idadeh"> <br>
+    <button onclick="consultarh()">Aposentadoria Homem</button> <br>
+    <button onclick="consultarm()">Aposentadoria Mulher</button>
+    
+</body>
+</html>
+<script>
+ function consultarh() {
+alert (`Faltam ${Number (70) - Number (in_idadeh.value)} Anos.`)
+ }
+
+ function consultarm() {
+alert (`Faltam ${Number (60) - Number (in_idadeh.value)} Anos.`)
+ }
+    
+
+
+
+
+</script>

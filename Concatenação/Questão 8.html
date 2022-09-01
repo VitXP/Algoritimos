@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aluno</title>
+</head>
+<body>
+    <h1>Média do Aluno</h1>
+
+    Insira o seu Nome <input id="in_nome"> <br>
+    Insira a sua nota continuada <input id="in_con"> <br>
+    Insira a sua nota semestral <input id="in_sem"> <br>
+    <button onclick="in_calcular_media()">Calcular média</button>
+
+    <div id="nota"></div>
+
+</body>
+</html>
+
+<script>
+ function in_calcular_media() {
+ nota.innerHTML = (`A média de ${(in_nome.value)} será de ${(40* Number( in_con.value) /100 + 60 * Number (in_sem.value) /100)}`)
+ }
+
+
+</script>

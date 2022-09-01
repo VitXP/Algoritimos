@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilhete Único</title>
+</head>
+<body>
+<h2>Bilhete Único de estudante</h2>
+
+Insira o valor da passagem <input id="in_valor"> <br>
+Insira quantas viagens você fará por mês <input id="in_viagens"><br>
+<Button onclick="ver_economia()">Ver economia</Button>
+
+</body>
+</html>
+   
+<Script>
+    function ver_economia() {
+    alert (`Você economizará R$ ${Number (in_valor.value) * Number (in_viagens.value)/2} por mês.`)
+    }
+
+    </Script>
