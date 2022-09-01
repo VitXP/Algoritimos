@@ -1,0 +1,196 @@
+Questões 
+
+Exercícios
+OBS: Envie o diagrama em formato de imagem (JPG ou PNG).
+
+1. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) O usuário informa 2 notas
+
+b) O programa calcula a média entre elas
+
+c) O programa exibe a média
+
+
+
+ 
+
+2. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) O usuário informa a frente e a lateral de um terreno retangular
+
+b) O programa calcula a área do terreno
+
+c) O programa exibe a área
+
+ 
+
+3. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) O usuário informa 2 notas
+
+b) O programa calcula a média entre elas, sendo que a primeira nota tem peso 4 e a segunda tem peso 6.
+
+c) O programa exibe a média
+
+ 
+
+4. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) O usuário informa 2 notas
+
+b) O programa calcula a média entre elas
+
+c) O programa exibe a "#partiuestágio" caso a média seja maior ou igual a 6 e "#partiutentardenovo" em caso contrário
+
+
+
+ 
+5. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) O usuário informa a frente e a lateral de um terreno retangular
+
+b) O programa calcula a área do terreno
+
+c) O programa exibe “#terrenopequeno” se a área for menor que 100, exibe “#terrenomedio” se a área estiver entre 100 e 250 ou exibe “#terrenogrande” caso a área for maior que 250
+
+ 
+
+6. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) O usuário informa quantas horas por noite dorme
+
+b) Caso ele durma de 0 a 4, exiba "#zumbi"
+
+c) Caso ele durma mais de 4 até menos de 7, exiba "Pouca concentração"
+
+d) Caso ele durma de 7 a 9, exiba "Boa concentração"
+
+e) Caso ele durma mais de 9, exiba "Olha a preguiça!"
+
+
+ 
+
+7. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) O usuário informa o salário de estagiário e o valor da faculdade.
+
+b) O programa calcula a média diária salário líquido (salário – faculdade). Considerar 30 dias
+
+c) Caso a média seja menor que 15, exibir “#controletotal”
+
+d) Caso a média esteja entre 15 e 20, exibir “#ragazzonosabado”
+
+e) Caso a média seja maior que 20 e menor 25, exibir “#cinemanamorada”
+
+f) Caso a média é de 25 a 30, exibir “#novogame”
+
+g) Caso a média seja maior que 30, exibir “#tobonito”
+
+ 
+
+8. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) O usuário informa seu sexo e sua idade
+
+b) Caso seja homem e menor de 18 anos, exiba "Você é homem e menino"
+
+c) Caso seja homem e idade a partir de 18 anos, exiba "Você é homem maior de idade"
+
+d) Caso seja mulher e menor de 18 anos, exiba "Você é mulher e menina"
+
+e) Caso seja mulher e idade a partir de 18 anos, exiba "Você é mulher maior de idade"
+
+ 
+
+9. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) O usuário informa o sexo e se é torcedor do Palmeiras
+
+b) Caso seja Homem e Torcedor do Palmeiras, exiba “Você é homem e seu time NÃO tem mundial”
+
+c) Caso seja Homem e não é Torcedor do Palmeiras, exiba “Você é homem e seu time pode ser que tenha mundial”
+
+d) Caso seja Mulher e Torcedora do Palmeiras, exiba “Você é mulher e seu time NÃO tem mundial”
+
+c) Caso seja Mulher e não é Torcedora do Palmeiras, exiba “Você é mulher e seu time pode ser que tenha mundial”
+
+ 
+
+10. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) Leia o estado brasileiro onde o usuário nasceu. Só aceite estados válidos, insistindo novamente até que seja informado um estado brasileiro
+
+b) Leia a quantidade de filhos que o usuário tem, porém, ela não fique entre 0 e 15, insista novamente até que fique.
+
+c) Caso a quantidade de filhos for 3, exiba "#nãotemtv  #nãoteminternet".
+
+d) Caso a quantidade de filhos for 2, exiba "#nãotemtv".
+
+e) Caso não tenha filhos, exiba "#tv  #internet  #videogame"
+
+f) Caso a quantidade de filhos for a maior que 3, exiba "#cresceiemultiplicaivos"
+
+ 
+
+11. Crie um diagrama de atividade que represente o seguinte programa:
+
+a) Na franquia de desenhos animados "Dragon Ball" existe uma raça chamada Namekusei. Eles regeneram uma parte do corpo caso retirada a força. Porém, sempre que fazem isso perdem 10% de sua força vital (seu "ki"). Quando seu ki está em 5% ou menos, não podem mais renegerar e morrem.
+
+b) No diagrama de atividades o Namekusei começa recebendo um golpe.
+
+c) Verifique se o golpe retirou uma parte de seu corpo. Se sim, verifique se ainda pode regenerar. Se não, recebe outro golpe e começa tudo novamente.
+
+b) Se ainda pode regenerar, regenera e perde ki. Se não pode, morre. Se não morreu, simplesmente recebe outro golpe e começa tudo novamente.
+
+ 
+
+12. Crie um diagrama de atividade que:
+
+a) Receba 2 notas de um aluno. Nenhuma delas pode ser menor que 0 nem maior que 10.
+
+b) A frequência em aula também deve ser solicitada e só devem ser aceitos valores entre 0 e 100, insistindo-se nessa entrada até que seja informado um valor válido.
+
+c) Calcule a média e exiba ela.
+
+d) Exiba "Parabéns, aprovado" se a média for maior ou igual a 6 e a frequência for a partir de 70% ou "Infelizmente, reprovado" em caso contrário.
+
+e) Pergunte se será cadastrado um novo aluno. Se "sim", volte para o item a). Em caso contrário, finalize o programa.
+
+
+ 
+
+13. Crie um diagrama de atividades que registre o fluxo de um atendente de uma caixa de supermercado.
+
+a) Receber o código do produto
+
+b) Se o código for inválido, exibir "Código não reconhecido" e tentar novamente o que foi feito em a)
+
+c) Em caso de código válido, registrar o preço do produto no valor total da compra
+
+d) Perguntar se o usuário deseja "informar outro código de produto ou finalizar compra"
+
+e) Se receber um código de outro produto, voltar para a atividade descrita em a)
+
+f) Se receber o pedido de fim da compra, exibir "Compra finalizada. Valor total: R$?"
+
+
+ 
+
+14 (desafio). Crie um diagrama de atividade que represente o seguinte programa de controle de peso em elevadores:
+
+a) Pergunte se entrou uma pessoa no elevador. Só vá para o passo seguinte quando alguém entrar
+
+b) Atualize o peso total no elevador com base no peso da pessoa que acabou de entrar
+
+c) Verifique se o próximo movimento do elevador será subir ou descer
+
+d) Caso o peso total seja maior que 400 e o próximo movimento for de subida, exiba "Alguém deve sair para eu subir", em seguida uma pessoa sai do elevador. Volte para b).
+
+e) Caso o peso total seja maior que 500 e o próximo movimento for de descida, exiba "Alguém deve sair para eu descer", em seguida uma pessoa sai do elevador. Volte para b).
+
+f) Quando o elevador puder subir ou descer, exiba "O elevador está [subindo/descendo]" (são 2 frases diferentes!)
+
+g) O elevador chega ao destino. Volte para a)
+
+OBS: Esse programa não tem um "fim"
