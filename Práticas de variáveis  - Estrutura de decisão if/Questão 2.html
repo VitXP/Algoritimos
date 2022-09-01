@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <h1>Refrigerantes consumidos ao ano</h1>
+
+    Insira a quantidade de latas de refrigerante que toma por dia <input type="number" id="in_lata">
+<button onclick="refis()">Quantos refris?</button>
+<div id="div_refis"></div>
+
+</body>
+</html>
+
+<script>
+    function refis() {
+    div_refis.innerHTML =""
+    var latas= (in_lata.value)
+    var ano= (latas) * 365
+
+    div_refis.innerHTML = (ano)
+
+    if (ano >= 500 ) {
+        div_refis.innerHTML += (", Cuidado com a diabetes!") }    
+
+    }
+
+    // if (ano >= 500 ) {
+    //     div_refis.innerHTML += ((ano) + ", Cuidado com a diabetes!") }
+    // else {
+    //     div_refis.innerHTML = (ano)
+    // }
+
+</script>

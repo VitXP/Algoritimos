@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos</title>
+</head>
+<body>
+    <h1>Desconto de jogos</h1>
+    Insira o nome do Jogo <input type="text" name="" id="in_nome">
+    Insira o valor do jogo <input type="number" id='in_valor'>
+    <br>
+<button onclick="Calcular()">Calcular desconto</button>
+<button onclick="RealizarCompra()">Realizar commpra com desconto</button>
+
+<div id="div_Resultado"></div>
+</body>
+</html>
+
+<script>
+
+
+function Calcular() {
+    
+    var jogo= (in_nome.value)
+    var valor= Number (in_valor.value)
+    var desconto= (in_valor.value) *10/100
+    var final= (valor)- (desconto)
+    
+    alert  (`O jogo ${(jogo)}, que custa R$ ${(valor)} sairá por R$${(final)}.`)
+    }
+
+    function RealizarCompra() {
+
+    var jogo= (in_nome.value)
+    var valor= Number (in_valor.value)
+    var desconto= (in_valor.value) *10/100
+    var final= (valor)- (desconto)
+    
+    
+    div_Resultado.innerHTML = (`Compra realizada com sucesso do jogo ${(jogo)}, por R$${(final)}`)
+
+}
+
+</script>

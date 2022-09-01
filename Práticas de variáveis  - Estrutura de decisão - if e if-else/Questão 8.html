@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 8</title>
+</head>
+<body>
+    <h1>Elevador</h1>
+    insira a a quantidade de Homens <input type="number" id="qtdhomens"> <br>
+    insira a a quantidade de Mulheres <input type="number" id="qtdmulher"> <br>
+    <button onclick="analisar()">Ligar elevador</button>
+    <div id="resposta"></div>
+    <b style="color:green;" id="resposta1"></b>
+    <b style="color:red;" id="resposta2"></b>
+
+
+</body>
+</html>
+<script>
+
+function analisar() {
+
+    var homem = Number (qtdhomens.value) * 90
+    var mulher= Number (qtdmulher.value) * 70
+    var pesototal= homem + mulher 
+    var perder =  pesototal - 500
+
+    resposta1.innerHTML=''
+    resposta2.innerHTML=''
+
+
+if (pesototal < 500 ) {
+    resposta1.innerHTML = (`Elevador vai se mover, pois está com ${pesototal}kg`)}
+     
+ else  {
+    resposta2.innerHTML = (`Alguém precisa descer. Precisa perder ${perder} kg para mover o elevador`)}
+
+}
+
+</script>
+
+

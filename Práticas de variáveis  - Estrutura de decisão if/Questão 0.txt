@@ -1,0 +1,5 @@
+1. Seguindo a premisa que os descontos dos jogos são unificados a 10% do valor total do jogo. Crie um programa em HTML/JS que:
+a) Solicite o nome do jogo
+b) Solicite o valor do jogo
+c) Ao clicar no botão 'Calcular Desconto', em forma de aviso mostre a seguinte frase "O jogo NOME, que custa R$VALOR_TOTAL sairá por R$X.", onde X é o novo valor com o desconto de 10%.
+d) Ao clicar no botão 'Realizar compra com desconto', abaixo do botão exiba uma frase como esta "Compra realizada com sucesso do Jogo NOME, por R$X" onde X é o novo valor com o desconto de 10%.

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+<body>
+
+    <h1>Aluna fora de série (Calcular Média). </h1>
+
+    insira nota 1 <input type="number" id="in_nota1"> <br>
+    Insira nota 2 <input type="number" id="in_nota2"> <br>
+    Insira nota 3 <input type="number" id="in_nota3"> <br>
+
+    <button onclick="analisar()">Analisar Desempenho</button>
+
+    <div id="resposta"></div>
+
+</body>
+</html>
+<script>
+
+    function analisar() {
+
+
+    var nota1 = Number (in_nota1.value)
+    var nota2 = Number (in_nota2.value)
+    var nota3 = Number (in_nota3.value)
+    var media = (nota1) + (nota2) + (nota3) / 3
+
+    resposta.innerHTML = (`Sua média foi de ${(media)}`)
+
+    if (media >= 9.4 ) {
+        resposta.innerHTML += (" Parabéns, você é fora de série") }    
+
+    }
+
+</script>

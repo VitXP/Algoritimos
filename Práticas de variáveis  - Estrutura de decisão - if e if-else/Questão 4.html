@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questã0 4</title>
+</head>
+<body>
+    <h1>Frequência de Alunos</h1>
+
+    Insira a frequência do aluno <input type="number" id="in_frequencia">
+    <button onclick="analisar()">Analisar frequência</button> <br>
+    <br>
+    <div id="div_imagem"></div>
+
+
+</body>
+</html>
+<script>
+function analisar() {
+var frequencia = Number (in_frequencia.value)
+
+if (frequencia >= 50) {
+        div_imagem.innerHTML=`<img src="https://i.pinimg.com/originals/e3/97/07/e3970776835a27927d028b14d55bbc61.png" alt="" width="200px">`}
+    else {
+        div_imagem.innerHTML= `<img src="https://st2.depositphotos.com/1669000/7840/v/600/depositphotos_78402666-stock-illustration-funny-cartoon-tourist.jpg" alt="" width="200px">`
+    }
+
+}
+
+
+</script>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <h1>Consultar Saldo</h1>
+    Insira o saldo da conta <input type="number" id="in_saldo"> <br>
+    Insira o valor do débito <input type="number" id="in_debito"> <br>
+    <button onclick="analisar()">Analisar conta</button> <br>
+    <div id="resultado"></div>
+    <i style="color:blue;" id="analisar_1"></i>
+    <b style="color:red;" id="analisar_2"></b>
+    
+</body>
+</html>
+<script>
+ function analisar() {
+var saldo= Number (in_saldo.value)
+var debito= Number (in_debito.value)
+var analise= saldo - debito
+analisar_1.innerHTML=""
+analisar_2.innerHTML=""
+
+if (analise < 0) {
+    analisar_2.innerHTML= (`o saldo atual da conta corrente é ${analise}`) }
+    else {
+        analisar_1.innerHTML= (`o saldo atual da conta corrente é ${analise}`)
+    }
+}
+
+</script>
+
+    <!-- function analise() { 
+    var saldo = Number (in_saldo.value) 
+    var debito = Number (in_debito.value)
+    var resultado = saldo - debito
+
+    if (resultado >= 0) {
+    div_resultado.innerHTML = <i style="color:blue"> O saldo atual da conta corrente é R$ ${resultado} </i>
+    } else {
+    div_resultado.innerHTML = <strong style="color:red"> O saldo atual da conta corrente é R$ ${resultado}</strong>
+    }
+    -->
+

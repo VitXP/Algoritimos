@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+<h1> Chocolates</h1>
+ Insira a quantidade de chocolates comprados <input type="number" id="in_qtd">
+ <button onclick="compra()">Compra</button>
+ <div id="resutlado"></div>
+<body>
+    
+</body>
+</html>
+<script>
+    function compra() {
+
+    var chocolate = Number (in_qtd.value)
+    var unidade = chocolate * 3
+    var unidade1 = chocolate * 2.50
+    
+
+    if (chocolate <= 12) {
+        resutlado.innerHTML= (`o valor da sua compra foi de ${unidade}.`) }
+    else {
+        resutlado.innerHTML= (`o valor da sua compra foi de ${unidade1}.`)
+    }
+
+    }
+</script>
+

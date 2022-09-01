@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+</head>
+<body>
+    <h1>Financiamento casa própria</h1>
+
+Insira o valor da renda familiar <input type="number" id="in_familia"> <br>
+Insira o valor da prestação <input type="number" id="in_valor"> <br>
+
+<button onclick="verificar()">Verificar financiamento</button>
+<div id="resultado"></div>
+<b style="color:red;" id="resultado_2"></b>
+
+
+</body>
+</html>
+<script>
+    function verificar() {
+
+        var renda = Number(in_familia.value)
+        var prestacao = Number (in_valor.value)
+        var porcent= (renda / prestacao)  * 100
+        resultado_2.innerHTML =""
+
+
+       
+        resultado.innerHTML= (` a prestação corresponde a  ${porcent} % da renda familiar `)
+
+        if (porcent >= 30 ) {
+        resultado_2.innerHTML += ( `, Será necessário complementar a renda familiar  `) }    
+
+
+
+    }
+
+</script>

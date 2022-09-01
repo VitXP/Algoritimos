@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+</head>
+<body>
+    <h1>Temperatura ideal para a conservação dos alimentos</h1>
+    Insira a temperatura do ambiente <input type="text" id="in_temperatura">
+    <button onclick="verificar()">Verificar clima</button>
+    <br><br><br>
+    <div id="resposta"></div>
+    <br>
+
+</body>
+</html>
+<script>
+function verificar() {
+var temperatura= Number (in_temperatura.value)
+
+if (temperatura < 10) {
+        resposta.innerHTML= (`Apropriada p/ conservar alimento <br><br><br> <img src="https://i.pinimg.com/736x/62/c5/08/62c5080ab474c7a72a95c3c1f4691f9e.jpg" alt="" width="200px">
+`) }
+    else {
+        resposta.innerHTML= (`Inapropriada p/ conservar alimento <br><br><br> <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/298997-diferentes-tipos-de-comida-estragada-gr%C3%A1tis-vetor.jpg" alt="" width="200px">
+`)
+    }
+}
+
+
+</script>
+
+
+
+
+
+
+ 

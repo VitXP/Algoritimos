@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 8---7a</title>
+</head>
+<body>
+    <h1>Elevador</h1> <br>
+    insira a quantidade de homens que entraram no elevador <input type="text" id="homem"> <br>
+    Insira a quantidade de mulher que entraram no elevador <input type="text" id="mulher"> <br>
+    <button onclick="analisar()">Analisar peso</button>
+    <div id="verificar"></div>   
+    <b style="color:blue;" id="resultado_2"></b>
+
+</body>
+</html>
+<script>
+
+function analisar() {
+
+    var homens = Number (homem.value) * 80
+    var mulheres = Number (mulher.value) * 60
+    var calculo = homens + mulheres
+    resultado_2.innerHTML=""
+
+if (calculo <= 800 ) {
+    verificar.innerHTML = (`Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${calculo}.`) 
+     }
+else  {
+    resultado_2.innerHTML = (`Será necessário descer alguém para que o elevador se movimente.`) 
+    verificar.innerHTML = "" }
+
+
+}
+</script>

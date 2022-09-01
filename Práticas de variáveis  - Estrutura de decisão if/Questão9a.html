@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming</title>
+</head>
+<body>
+    <h2>Horas de streaming</h2>
+    Insira a última série (SITCOM) assistida <input id="in_sitcom"> <br>
+    Insira o total de episódios assistidos: <input id="in_episodios"> <br>
+    <button onclick="verificar()">Verificar nível</button>
+    <div id="verificar1"></div>
+
+</body>
+</html>
+<script>
+
+    function verificar() {
+
+        var serie = (in_sitcom.value)
+        var episodio = (in_episodios.value)
+        var min= (episodio) * 22
+        var hora = (min) /60    
+    
+
+if (hora > 30) {
+    verificar1.innerHTML = (`Uau, você realmente gosta dessa série`) 
+     }
+
+if (hora < 30) {
+    verificar1.innerHTML = (`Vejo que você gosta da série ${serie}`) 
+   }
+
+    }
+</script>

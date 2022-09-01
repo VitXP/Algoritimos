@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4--7b</title>
+</head>
+<body>
+    
+    <h1>Pizza</h1>
+    Insira o valor da pizza <input type="number" id="in_pizza"> <br>
+    Insira a quantidade de pessoas <input type="number" id="in_pessoas"> <br>
+    <button onclick="in_rola()">Rola a pizza?</button> <br>
+    <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function in_rola() {
+
+        var pessoa = (in_pizza.value)
+        var pizza = (in_pessoas.value)
+        var divisao= (pessoa) / (pizza)
+
+    
+
+        if (divisao <= 20) {
+            resultado.innerHTML = (`Cada amigo vai pagar R$${(divisao)} pela pizza.`)} 
+            else { resultado.innerHTML = (` Cada amigo vai pagar R$${(divisao)} pela pizza. Deu ruim! Pizza muito cara!`) }
+        
+    }
+</script>
+

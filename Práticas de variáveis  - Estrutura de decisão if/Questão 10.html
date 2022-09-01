@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+</head>
+<body>
+    <h1>Banco</h1> <br>
+    insira o valor de seu saldo na conta do banco <input type="text" id="valor"> <br>
+    <button onclick="verificar()">Verificar finanças</button>
+    <div id="verificar"></div>   
+    <b style="color:black;" id="verificar_1"></b>
+    <b style="color:red;" id="verificar_2"></b>
+    <b style="color:blue;" id="verificar_3"></b>
+
+</body>
+</html>
+<script>
+
+function verificar() {
+
+    verificar_1.innerHTML = ""
+    verificar_2.innerHTML= ""
+    verificar_3.innerHTML= ""
+
+  
+    var saldo = Number (valor.value)
+    
+
+if (saldo ==0 ) {
+    verificar_1.innerHTML = (`Conta zerada`) 
+     }
+
+if (saldo < 0 ) {
+    verificar_2.innerHTML = (`Está devendo!.`) 
+   }
+
+    if (saldo > 0 ) {
+    verificar_3.innerHTML = (`Saldo positivo! sorriso`) 
+    verificar_2.innerHTML= ""
+ }
+
+}
+</script>
+
+
+
+
