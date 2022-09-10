@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+</head>
+
+<body>
+    <h1>Pizza</h1>
+    Insira o sabor da pizza <input type="text" id="in_sabor"> <br>
+    Insira o preço da pizza <input type="number" id="in_preco"> <br>
+    Insira a quantidade de amigos que vai rachar a conta <input type="number" id="in_qtd"> <br>
+    <button onclick="Pedir_Pizza()">Pedir Pizza</button>
+
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+<script>
+    function Pedir_Pizza() {
+
+        var sabor = (in_sabor.value)
+        var preco = Number (in_preco.value)
+        var amigos = Number (in_qtd.value)
+        calculo= preco / amigos
+
+        resultado.innerHTML = `A pizza de ${sabor} custa R$${preco.toFixed(2)} e cada amigo vai pagar R$${calculo.toFixed(2)}`
+
+    }
+
+</script>
+
+
+<!-- 1. Crie um programa em HTML/JS que:
+a) Solicite o sabor de uma pizza
+b) Solicite o preço da pizza
+c) Solicite a quantidade de amigos que vai rachar a conta
+d) Ao clicar em "Pedir Pizza", exiba abaixo do botão um texto como este: "A pizza de X custa R$Y e cada amigo vai pagar R$Z"
+e) Exiba os valores sempre com 2 casas decimais -->

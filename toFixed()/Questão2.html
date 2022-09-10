@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+
+<body>
+    <h1>Calcular Média</h1>
+    Insira nota 1 <input type="number" id="in_nota1"> <br>
+    Insira nota 2 <input type="number" id="in_nota2"> <br>
+    <button onclick="media()">Ver média</button> <br>
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+<script>
+    function media() {
+        var nota1 = Number(in_nota1.value)
+        var nota2 = Number(in_nota2.value)
+        var calculo= (nota1+nota2)/2
+
+        div_resultado.innerHTML= `Sua média foi de ${calculo.toFixed(2)}`
+
+    }
+</script>
+
+<!-- 2. Crie um programa em HTML/JS que:
+a) Solicite 2 notas do aluno
+b) Ao clicar em "Ver média", exiba abaixo dele a frase "Sua média foi de X", onde X é a média aritmética entre as 2 notas
+c) Exiba os valores sempre com 2 casas decimais -->

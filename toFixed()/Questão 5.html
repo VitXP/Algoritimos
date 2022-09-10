@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+
+<body>
+    <h1>Calculadora de Desconto (CLT)</h1>
+    Insira o valor do salário bruto <input type="number" id="in_salario"> <br>
+    <button onclick="desconto()">Calcular Desconto</button>
+
+</body>
+
+</html>
+<script>
+    function desconto() {
+        var salario = Number(in_salario.value)
+        var inss = salario * 0.1
+        var ir = salario * 0.2
+        var sindical= salario* 0.03
+        var descontofinal = salario - (ir + inss + sindical) 
+        alert(`Apesar de seu bruto ser R$${salario.toFixed(2)}, após os descontos, você receberá somente R$${descontofinal.toFixed(2)}`)
+
+    }
+</script>
+
+
+
+
+<!-- 5. Antônia Legre vai começar em seu primeiro emprego com carteira assinada após ser efetivada num estágio numa empresa de TI parceira da SPTech. Enfim ela descobriu que quando um funcionário tem um salário de R$3.000,00, na verdade não cai esse valor em sua conta, pois pela CLT temos vários descontos. Crie um programa que:
+a) Solicite o valor do salário bruto do usuário
+b) Calcule o valor do desconto de INSS (previdência), que é 10% do valor do bruto
+c) Calcule o valor do desconto de IR (imposto de renda), que é 20% do valor do bruto
+d) Calcule o valor do imposto sindical, que é 1/30 do bruto
+e) Exiba um alerta com uma frase como esta: "Apesar de seu bruto ser R$X, após os descontos, você receberá somente R$Y"
+f) Exiba os valores sempre com 2 casas decimais -->

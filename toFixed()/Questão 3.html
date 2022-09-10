@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+
+<body>
+    <h1>Operação Aritmética</h1>
+    Insira o primeiro número <input type="number" id="in_numero1"> <br>
+    Insira o segundo número <input type="number" id="in_numero2"> <br> <br>
+    <button onclick="Soma()">Calcular soma</button>
+    <button onclick="diferença()">Calcular Diferença</button>
+    <button onclick="produto()">Calcular Produto</button>
+    <button onclick="razao()">Calcular Razão</button>
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+<script>
+
+    function Soma() {
+        var numero1 = Number (in_numero1.value)
+        var numero2 = Number (in_numero2.value)
+        var calculo= numero1 + numero2
+        resultado.innerHTML= `A soma entre ${numero1.toFixed(2)} e ${numero2.toFixed(2)} é ${calculo.toFixed(2)}.`
+    }
+
+    function diferença() {
+        var numero1 = Number(in_numero1.value)
+        var numero2 = Number(in_numero2.value)
+        var calculo= numero1 - numero2
+        resultado.innerHTML= `A diferença entre ${numero1.toFixed(2)} e ${numero2.toFixed(2)} é ${calculo.toFixed(2)}.`
+    }
+
+
+    function produto() {
+        var numero1 = Number(in_numero1.value)
+        var numero2 = Number(in_numero2.value)
+        var calculo= numero1 * numero2
+        resultado.innerHTML= `O produto entre ${numero1.toFixed(2)} e ${numero2.toFixed(2)} é ${calculo.toFixed(2)}.`
+    }
+
+
+    function razao() {
+        var numero1 = Number(in_numero1.value)
+        var numero2 = Number(in_numero2.value)
+        var calculo= numero1 / numero2
+        resultado.innerHTML= `A razão entre ${numero1.toFixed(2)} e ${numero2.toFixed(2)} é ${calculo.toFixed(2)}.`
+    }
+
+
+</script>
+
+<!-- 3. Crie um programa que:
+a) Solicite 2 números ao usuário
+b) tenha um botão para cada operação aritmética. Ao clicar em algum deles, exibir ABAIXO do botão UMA dessas frases:
+
+   A soma entre X e Y é Z
+   A diferença entre X e Y é Z
+   O produto entre X e Y é Z
+   A razão entre X e Y é Z         
+
+OBS: exiba os valores sempre com 2 casas decimais -->

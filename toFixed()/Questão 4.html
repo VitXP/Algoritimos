@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+<body>
+  <h1>Calculo IMC</h1>
+
+Insira o peso <input type="number" id="in_peso"> <br>
+Insira a altura <input type="number" id="in_altura"> <br> <br>
+<button onclick="imch()">IMC Homem</button>
+<button onclick="imcm()">IMC Mulher</button>
+<div id="resultado"></div>
+
+</body>
+</html>
+<script>
+
+function imch() {
+    var peso= Number (in_peso.value)
+    var altura= Number (in_altura.value)
+    var imchomem = peso / (altura*altura)
+    resultado.innerHTML = `O seu IMC é ${imchomem.toFixed(2)}`
+}
+
+function imcm() {
+    var peso= Number (in_peso.value)
+    var altura= Number (in_altura.value)
+    var imchomem = (peso / (altura*altura))
+    var imchmulher= imchomem - (imchomem * 0.1)
+    resultado.innerHTML = `O seu IMC é ${imchmulher.toFixed(2)}`
+}
+
+
+</script>
+
+
+<!-- 4. Crie um programa que:
+a) Solicite ao usuário seu peso e altura
+b) Ao clicar no botão "IMC Homem", calcule e exiba seu IMC considerando que é um homem
+c) Ao clicar no botão "IMC Mulher", calcule e exiba seu IMC considerando que é uma mulher
+Use a fórmula de IMC em https://centrodeobesidadeediabetes.org.br/tudo-sobre-obesidade/calculadora-de-imc/. E considere que o IMC da mulher é sempre 10% menor que o do homem.
+d) Exiba os valores sempre com 2 casas decimais -->
+
+
