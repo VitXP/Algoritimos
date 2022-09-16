@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+</head>
+
+<body>
+    <h1>One Punch Man</h1>
+    Escolha um: <select name="" id="sel_classe" onchange="ver_classe()">
+        <option value="Classe S"> Metal Night</option>
+        <option value="Classe A"> Máscara Doce</option>
+        <option value="Classe S"> Prisoneiro Puri Puri</option>
+        <option value="Classe B"> Fubuki</option>
+        <option value="Classe C"> Cavaleiro sem licença</option>
+    </select>
+
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+<script>
+    function ver_classe() {
+var classe= sel_classe.value
+
+resultado.innerHTML = (` Esse(a) herói(na) é da classe ${classe}`)
+   
+   }
+
+</script>
+
+<!-- 1. No anime "One Punch Man", os heróis são classificados em classes C, B, A ou S (a mais top). Crie um programa o qual:
+
+a) O usuário indica qual herói quer saber a classe, escolhendo dentre as opções:
+ Metal Night
+ Máscara Doce
+ Prisioneiro Puri Puri
+ Fubuki
+ Cavaleiro sem licença
+
+b) Ao selecionar um deles, o programa exibe na própria página um texto como esse:
+ Esse(a) herói(na) é da classe X
+Onde X é a classe do heroi escolhido (pesquise na internet)
+
+ -->

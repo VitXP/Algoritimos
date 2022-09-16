@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Oração pela paz</h1>
+    <select name="" id="sel_oração" onchange="ver_oração()">
+        <option value="que eu leve o Amor"> onde houver ódio</option>
+        <option value="que eu leve o Perdão"> Onde houver Ofensa</option>
+        <option value="que eu leve a União"> Onde houver Discórdia</option>
+        <option value="que eu leve a Fé"> Onde houver Dúvida</option>
+    
+    </select>
+</body>
+</html>
+<script>
+    function ver_oração() {
+        var oração = sel_oração.value
+    alert (`${oração}`)
+    }
+
+</script>
+
+<!-- 4. Existe uma oração muito famosa atribuída a São Francisco de Assis, chamada "Oração pela paz". É aquela que diz "onde houver ódio que eu leve amor, onde houver desespero que eu leve esperança...". Ou seja, tem um sentimento ruim e o bom em seguida.
+
+Crie um programa o qual: 
+
+a) Tenha tenha uma combo box onde o usuário veja pelo menos 4 dos trechos que começam com "onde houver..." da oração. Mas deve haver só até a palavra negativa (ex: "Onde houver ódio"). 
+
+b) Ao escolher uma opção, exiba um alerta com a parte "boa" correspondente, conforme a oração -->

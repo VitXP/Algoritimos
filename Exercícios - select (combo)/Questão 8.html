@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 8</title>
+</head>
+<body>
+    <h1>Descontos de Carteira Assinada</h1>
+    Digite seu salário <input type="number" id="in_salario">
+    <select name="" id="sel_descontos">
+        <option value="0.1">INSS</option>
+        <option value="0.2 ">IR</option>
+        <option value="0.05">VT</option>
+    </select>
+    <button onclick="Ver_Desconto()">Ver Desconto</button>
+    <br>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+function Ver_Desconto() {
+    var salario = Number (in_salario.value)
+    var desconto = Number (sel_descontos.value)
+    var muliplicacao= salario * desconto
+    resultado.innerHTML= ` Valor desse desconto: R$${muliplicacao.toFixed(2)}`
+}
+</script>
+
+
+
+<!--
+8. Crie um programa que ajude o usuário a conhecer cada um dos descontos que um empregado de carteira assinada tem.
+a) A tela deve ter um campo "Digite seu salário"
+b) A tela deve ter um "combo" com as opções:
+   INSS
+   IR
+   VT
+c) Ao clicar num botão "Ver Desconto", deve aparecer na tela uma frase como esta:
+   Valor desse desconto: R$X,XX
+#ficaadica1 - Exiba os centavos sempre com 2 casa decimais.
+#ficaadica2 - Para calcular os descontos, considere que INSS é 10% do salário, IR é 20% do salário e VT é 5% do salário. Por exemplo, se digitarmos 1000 no salário e escolhermos a opção VT, ao clicar no botão deve aparecer que o desconto é de 50. -->

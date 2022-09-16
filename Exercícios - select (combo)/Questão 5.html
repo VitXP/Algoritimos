@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <h1>Tabuada do 2 </h1>
+    <select name="" id="sel_calculo" onchange="ver_calculo()">
+
+        <option value="4">2 x 2 =</option>
+        <option value="6">2 x 3 =</option>
+        <option value="8">2 x 4 =</option>
+        <option value="10">2 x 5 =</option>
+        <option value="12">2 x 6 =</option>
+        <option value="14">2 x 7 =</option>
+        <option value="16">2 x 8 =</option>
+        <option value="18">2 x 9 =</option>
+    </select>
+    
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+<script>
+    function ver_calculo() {
+        var soma = Number (sel_calculo.value)
+        div_resultado.innerHTML = `O resultado é ${soma}.`
+    }
+
+</script>
+
+
+<!-- 
+5. Faça um programa que ensine a tabuada, tenha uma lista suspensa com as opções de 2 a 9 e ao selecionar uma das opções mostre na página a tabuada do número selecionado.  
+Ex: se escolher 4:
+4 x 2 = 8
+4 x 3 = 12
+4 x 4 = 16
+...
+4 x 9 = 36
+
+#ficaadica use o atributo onchange
+
+  -->

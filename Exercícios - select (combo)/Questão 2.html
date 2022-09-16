@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+
+<body>
+    <h1>Simulador Aposentadoria</h1>
+    Insira quantos anos já trabalhou: <input type="number" id="in_anos">
+    <br>
+    Selecione o tipo de contrato: <select name="" id="sel_contrato">
+        <option value="40"> Funcionário de empresa privada</option>
+        <option value="35"> Funcionário de empresa pública</option>
+        <option value="45"> Empreendedor </option>
+    </select>
+    <br>
+    <Button onclick="calcular()">Calcular aposentadoria</Button>
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+<script>
+    function calcular() {
+
+var contrato= Number (sel_contrato.value)
+var anos= Number (in_anos.value)
+var soma= contrato-anos
+
+resultado.innerHTML = (`Você ainda terá que trabalhar por mais ${soma} anos para se aposentar.`)
+
+    }
+
+</script>
+
+<!-- 2. Crie um simulador de idade de tempo para aposentadoria:
+
+a) O usuário digita quantos anos já trabalhou
+
+b) O usuário informa numa lista se trabalhou mais como:
+  Funcionário de empresa privada
+  Funcionário de empresa pública
+  Empreendedor
+
+c) Ao clicar no botão "Calcular aposentadoria", o programa exibe na página uma frase como esta:
+   Você ainda terá que trabalhar por mais X anos para se aposentar.
+Onde X é calculado conforme essa regra:
+  Um funcionário de empresa privada precisa trabalhar por 40 anos para aposentar
+  Um funcionário de empresa pública precisa trabalhar por 35 anos para aposentar
+  Um empreendedor precisa trabalhar por 45 anos para aposentar -->
