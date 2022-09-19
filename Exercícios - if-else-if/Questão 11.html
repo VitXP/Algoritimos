@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 11</title>
+</head>
+
+<body>
+    <h1>Estações do ano</h1>
+    <select id="sel_estacoes" onchange="meses()">
+        <option value="4"> Janeiro </option>
+        <option value="4"> Fevereiro </option>
+        <option value="1"> Março </option>
+        <option value="1"> Abril </option>
+        <option value="1"> Maio </option>
+        <option value="2"> Junho </option>
+        <option value="2"> Julho </option>
+        <option value="2"> Agosto </option>
+        <option value="3"> Setembro </option>
+        <option value="3"> Outubro </option>
+        <option value="3"> Novembro </option>
+        <option value="4"> Dezembro </option>
+    </select>
+    <br>
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+<script>
+
+    function meses() {
+        var mes = (sel_estacoes.value)
+
+        if (mes == 1) {
+            resultado.innerHTML = `<img src="https://static.mundoeducacao.uol.com.br/mundoeducacao/2020/11/folhas.jpg" alt="" width="200px">`
+
+        } else if (mes == 2) {
+            resultado.innerHTML = `<img src="https://t5z6q4c2.rocketcdn.me/wp-content/uploads/2020/04/inverno-datas-e-caracteristicas.jpg" alt="" width="200px">`
+
+        } else if (mes == 3) {
+            resultado.innerHTML = `<img src="https://salerno.occhionotizie.it/wp-content/uploads/sites/2/2018/03/Primavera-1000x600.jpg" alt="" width="200px">`
+
+        } else {
+            resultado.innerHTML = `<img src = "https://jeonline.com.br/site/uploads/posts/6596_22122015154333.jpg" alt = "" width = "200px">`
+        }
+    }
+
+</script>
+
+<!-- 11. Crie um programa o qual:
+
+a) Tenha uma combo (select) com todos os meses do ano (option)
+
+b) Após alterar o valor da combo, exiba abaixo dela o nome uma imagem da estação do ano mais provável
+
+c) Considere que o clima é no hemisfério sul, ou seja:
+     Outono: março, abril e maio.
+     Inverno: junho, julho e agosto.
+     Primavera: setembro, outubro e novembro.
+     Verão: dezembro, janeiro e fevereiro. -->

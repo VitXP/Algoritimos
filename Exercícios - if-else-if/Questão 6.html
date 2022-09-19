@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+</head>
+
+<body>
+    <h1>Times De Futebol</h1>
+    <select id="sel_lista">
+        <option value="1" >Corinthians</option>
+        <option value="2" >Palmeiras</option>
+        <option value="3">Santos</option>
+        <option value="4" >São Paulo</option>
+    </select>
+    <button onclick="botao()">Fale sobre esse time</button>
+    <div id="resultado"></div>
+
+</body>
+
+</html>
+<script>
+    function botao() {
+        var lista = (sel_lista.value)
+        
+
+        if (lista == 1) {
+            resultado.innerHTML = `<div style="background-color:black; color: white"> Salve o Corinthians  </div>`
+        } else if (lista == 2) {
+            resultado.innerHTML = `<div style="background-color:green; color: white"> Salve o alviverde </div>`
+        } else if (lista == 3) {
+            resultado.innerHTML = `<div style="background-color:white; color: black"> Agora que dá a bola é o Santos </div>`
+        } else { 
+            resultado.innerHTML = `<div style="background-color:black; color: red"> Salve o Tricolor paulista </div>`
+        }
+
+    }
+
+</script>
+
+<!-- 6. Crie um programa o qual:
+a) Pergunte numa combo, qual time grande São Paulo o usuário torce. Use uma combo.
+b) Ao clicar em "Fale sobre esse time", exiba abaixo:
+   "Salve o Corinthians" com fundo preto e letra branca, se for Corinthians
+   "Salve o alviverde imponente" com fundo verde e letra branca, se for Palmeiras
+   "Agora que dá a bola é o Santos" com fundo branco e letra preta, se for Santos
+   "Salve o Tricolor paulista" com fundo preto e letra vermelha, se for São Paulo  -->

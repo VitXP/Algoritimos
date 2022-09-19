@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 14</title>
+</head>
+
+<body>
+    <h1> Luta</h1>
+    <div id="div_mensagem">Vida do Lutador: 1000.00</div> <br>
+    <div id="div_imagem"><img src="https://caua1000.files.wordpress.com/2012/03/naruto_uzumaki.jpg" alt=""
+            width="200px"></div> <br><br>
+    <button onclick="apanhar()">Apanhar</button>
+    <button onclick="forca()">Concentrar força</button>
+    <div id="div_resultado"></div>
+
+</body>
+
+
+</html>
+<script>
+
+    var vida = 1000
+    var dano = 100
+    var concentrar = 0.05
+
+    function apanhar() {
+        vida = vida - dano
+
+        if (vida <= 0) {
+            div_mensagem.innerHTML = `Lutador já era! <br><br> <img src="https://i0.wp.com/2.bp.blogspot.com/_v4-ID-EfyDA/TShFhQz7qNI/AAAAAAAAANI/TmsQ59LCAGc/s1600/naruto-SuperRecorts.png" alt="" width="200px">`
+            div_imagem.innerHTML = ''
+
+        } else {
+            div_mensagem.innerHTML = `Vida do Lutador: ${vida.toFixed(2)} <br> Lutador ainda vivo`
+        }
+    }
+
+    function forca() {
+        vida += vida * concentrar
+
+        if (vida > 0) {
+            div_mensagem.innerHTML = `Vida do Lutador: ${vida.toFixed(2)} <br> Lutador ainda vivo`
+        }
+    }
+
+</script>
+
+
+<!-- 14. Crie um programa o qual:
+a) Tenha o seguinte texto no topo: Vida do Lutador: 1000
+b) Abaixo do texto tenha uma foto de um Lutador em ótima condição
+c) Tenha os botões "Apanhar" e "Concentrar força"
+d) Ao clicar no "Apanhar", a vida do Lutador reduz em 100
+e) Ao clicar no "Concentrar força", a vida do Lutador aumenta em 5%
+f.A) Caso a vida do lutador chegue em 0 ou menos, exibir, abaixo do texto de a) a frase Lutador já era! e a foto do Lutador deve mudar para o mesmo personagem, mas todo machucado. Enquanto não chegar em 0, sempre que apanhar ou concentrar força, exiba, no mesmo lugar, a frase Lutador ainda vivo!
+f.B) Caso a vida seja 0 ou menos, nenhum dos botões deve mais funcionar -->
