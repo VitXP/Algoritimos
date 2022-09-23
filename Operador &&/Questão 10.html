@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 10</title>
+</head>
+
+<body>
+    <h1>Altura de seleção</h1> <br>
+    Insira o intervalo da altura desejada para os próximos candidatos a piloto: <br>
+    inicial <input type="number" id="in_inicial"><br>
+    Final <input type="number" id="in_final"><br>
+    Insira o nome do candidato a piloto <input type="text" id="in_nome"><br>
+    Insira a altura do candidato a piloto <input type="number" id="in_altura"><br>
+    <button onclick="cadastrar()">Cadastrar</button> 
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+        var nome = (in_nome.value)
+        var altura = Number(in_altura.value)
+        var inicial = Number(in_inicial.value)
+        var final = Number(in_final.value)
+
+        if (inicial < 1 ) {
+            alert(`Não seguir em frente, Altura tem que ser maior que 1`)
+        } else if (inicial > final) {
+            alert(`Altura final tem que ser maior que a altura inicial`)
+        }
+        else if (altura >= inicial && altura <= final) {
+            resultado.innerHTML = `O candidato ${nome} com altura de ${altura.toFixed(2)} participará do processo de seleção de piloto`
+        } else {
+            resultado.innerHTML = `Infelizmente o candidato ${nome} com altura de ${altura.toFixed(2)} não atende os requisitos`
+
+
+        }
+    }
+</script>
+
+<!-- 
+10. Crie um programa o qual:
+
+a) Pergunte o intervalo da altura desejada para os próximos pilotos (altura inicial e altura final de seleção) A altura inicial tem que ser maior que 1 e a altura final tem que ser maior que a altura inicial, caso contrário emitir mensagem de alerta E NÃO SEGUIR EM FRENTE.
+
+b) Pergunte o nome e a atura do candidato a piloto.
+
+c) Após clicar num botão "Cadastrar", fazer a valição descrita em a) e, caso ela passe, emitir uma das duas mensagens abaixo sem apagar as mensagens anteriores:
+
+   c.1) “O candidato XXXXX com altura de 9,99 participará do processo de seleção de piloto”, caso a altura do candidato esteja no intervalo informado.
+
+   c.2) “Infelizmente o candidato XXXXX com altura de 9,99 não atende os requisitos”, caso a altura do candidato NÃO esteja no intervalo informado. -->

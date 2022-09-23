@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 14</title>
+</head>
+
+<body>
+    <div id="vazio">
+        <h1>Altura de seleção</h1> <br>
+        Insira o intervalo da altura desejada para os próximos candidatos a piloto: <br>
+        inicial <input type="number" id="in_inicial"><br>
+        Final <input type="number" id="in_final"><br>
+        Insira o nome do candidato a piloto <input type="text" id="in_nome"><br>
+        Insira a altura do candidato a piloto <input type="number" id="in_altura"><br>
+        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="selecionar()">Selecionar</button>
+        <div id="resultado"></div>
+    </div>
+    <div id="pag2"></div>
+</body>
+
+</html>
+<script>
+    function cadastrar() {
+        var nome = (in_nome.value)
+        var altura = Number(in_altura.value)
+        var inicial = Number(in_inicial.value)
+        var final = Number(in_final.value)
+
+        if (inicial < 1) {
+            alert(`Não seguir em frente, Altura tem que ser maior que 1`)
+        } else if (inicial > final) {
+            alert(`Altura final tem que ser maior que a altura inicial`)
+        }
+        else if (altura >= inicial && altura <= final) {
+            resultado.innerHTML = `O candidato ${nome} com altura de ${altura.toFixed(2)} participará do processo de seleção de piloto`
+        } else {
+            resultado.innerHTML = `Infelizmente o candidato ${nome} com altura de ${altura.toFixed(2)} não atende os requisitos`
+
+
+        }
+    }
+
+    function cadastrar1() {
+            var nome1 = (in_nome1.value)
+            var altura1 = Number(in_altura1.value)
+            var escolha = (sel_escolha.value)
+            var inicialp = 1.50
+            var finalp = 1.70
+            var inicialb = 1.80
+            var finalb = 2.00
+
+            if (escolha == "piloto" && altura1 >= inicialp && altura1 <= finalp) {
+                resultado1.innerHTML = `O candidato ${nome1} com altura de ${altura1} participará do processo de seleção de piloto`
+            } else if (escolha == "jogador" && altura1 >= inicialb && altura1 <= finalb) {
+                resultado1.innerHTML = `O candidato ${nome1} com altura de ${altura1}  participará do processo de seleção de piloto`
+            } else {
+                resultado1.innerHTML = `Infelizmente o candidato ${nome1} com altura de ${altura1} não atende os
+        requisitos`
+            }
+        }
+ 
+
+
+
+    function selecionar() {
+        vazio.innerHTML = ''
+        
+        pag2.innerHTML = `
+        <h1>Processo de Seleção de novos atletas</h1> 
+        <h5><i>Critério de Seleção de piloto – altura entre 1,50 até 1,70</i></h5> 
+        <h5><i>Critério de Seleção de jogador de basquete – altura entre 1,80 até 2,00</i></h5> 
+        Insira o nome do candidato  <input type="text" id="in_nome1"><br>
+        Insira a altura do candidato  <input type="number" id="in_altura1"><br>
+        Insira a modalidade do candidato <select name="" id="sel_escolha">
+            <option value="">-- Selecionar --</option>
+            <option value="piloto">Piloto</option>
+            <option value="jogador">Jogador de basquete</option>
+        </select>
+       <br> <button onclick="cadastrar1()">Cadastrar</button> 
+       <div id="resultado1"></div>
+
+
+       <script>
+       
+        
+        <script>
+
+`
+
+
+
+    }
+</script>
+
+
+<!-- 14. DESAFIO!!! Crie um f)
+        Se a modalidade for piloto, emitir uma das duas mensagens abaixo sem apagar as mensagens anteriores:
+        
+        1) “O candidato XXXXX com altura de 9,99 participará do processo de seleção de piloto”, caso a altura do candidato
+        esteja no intervalo informado para piloto. 
+        
+        2) “Infelizmente o candidato XXXXX com altura de 9,99 não atende os
+        requisitos”, caso a altura do candidato NÃO esteja no intervalo informado para piloto
+        
+        g) Se a modalidade for
+        jogador de basquete, emitir uma das duas mensagens abaixo sem apagar as mensagens anteriores: 
+        
+        1) “O candidato
+        XXXXX com altura de 9,99 participará do processo de seleção de piloto”, caso a altura do candidato esteja no
+        intervalo informado para jogador. 
+        
+        
+        2) “Infelizmente o candidato XXXXX com altura de 9,99 não atende os
+        requisitos”, caso a altura do candidato NÃO esteja no intervalo informado para jogador -->

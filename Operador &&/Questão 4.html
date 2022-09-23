@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+
+<body>
+    <h1>Veganismo</h1>
+
+    <select name="" id="sel_veganocafe">
+        <option value="nv">ovos</option>
+        <option value="v">leite de arroz</option>
+        <option value="nv">bacon</option>
+    </select>
+
+    <select name="" id="sel_veganoalmoco">
+        <option value="nv">bife</option>
+        <option value="v">hamburger de soja</option>
+        <option value="nv">frango grelhado</option>
+    </select>
+
+    <select name="" id="sel_veganojanta">
+        <option value="nv">Picanha de soja</option>
+        <option value="v">Cupim</option>
+        <option value="nv">coração</option>
+    </select>
+
+    <button onclick="Sou_vegano()">Sou vegano</button>
+
+</body>
+
+</html>
+<script>
+    function Sou_vegano() {
+        var cafe= (sel_veganocafe.value)
+        var almoco = (sel_veganoalmoco.value)
+        var janta = (sel_veganojanta.value)
+
+        if (cafe == 'v' && almoco == 'v' && janta==`v` ) {
+            alert(`Sim, você é vegano!`)
+
+        } else {
+            alert(`Não, você não é vegano`)
+        }
+    }
+</script>
+
+<!-- 4. Crie um programa que verifique se o usuário é vegano ou não.
+
+a) Numa combo pergunte o que ele come no café da manhã, tendo as opções
+    ovos
+    leite de arroz
+    bacon
+
+b) Numa outra combo pergunte o que ele come no almoço, tendo as opções
+    bife
+    hamburger de soja
+    frango grelhado
+
+c) Numa outra combo pergunte o que ele come na janta, tendo as opções
+
+    picanha de soja
+    cupim
+    coração
+
+d) Ao clicar no botão "Sou vegano", aparece um alert com uma dessas frases:
+    "Sim, você é vegano!", caso ele consuma leite de arroz no café, hamburger de soja no almoço e picanha de soja na janta
+
+    "Não, você não é vegano", caso contrário -->
