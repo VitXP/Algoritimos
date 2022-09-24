@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 4</title>
+</head>
+
+<body>
+  <h1>Compras</h1>
+
+  Selecione o modo de pagamento: <select name="" id="sel_compra">
+    <option value="1">Dinheiro</option>
+    <option value="2">Cartão de débito</option>
+    <option value="3">Cartão de crédito</option>
+    <option value="4">Boleto</option>
+  </select>
+
+  <button onclick="compra()">Analisar compra</button>
+  <div id="resultado"></div>
+
+</body>
+
+</html>
+<script>
+  function compra() {
+    var compra = sel_compra.value
+
+    if (compra == '1' || compra == '2') {
+      resultado.innerHTML= `Você terá que pagar a vista`
+    } else {
+      resultado.innerHTML= `Pagamento poderá ser parcelado`
+    }
+  }
+  
+</script>
+
+<!-- 4. Crie um programa que avalie a possibilidade de um pagamento da compra ser parcelado ou não. 
+
+a) Pergunte o modo de pagamento numa combo com as seguintes opções: 
+
+    Dinheiro 
+    Cartão de débito 
+    Cartão de crédito 
+    Boleto 
+
+b) Ao clicar num botão "Analisar compra", exiba uma dessa mensagens: 
+
+   "Você terá que pagar a vista", somente se o pagamento for dinheiro ou débito 
+   "Pagamento poderá ser parcelado", se o pagamento for crédito ou boleto 
+
+  -->
