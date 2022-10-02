@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+
+<body>
+    <h1>TV</h1>
+
+    Insira a a marca da TV <select name="" id="sel_tv">
+        <option value="1">Samsung</option>
+        <option value="2">LG</option>
+        <option value="3">Mondial</option>
+        <option value="4">Britânia</option>
+    </select> <br>
+
+    Insira o o preço da TV <input type="number" id="in_preco"> <br>
+    <button onclick="compra()">Analisar compra </button>
+    <div id="resultado"></div>
+    <div id="resultado2"></div>
+
+</body>
+
+</html>
+<script>
+    function compra() {
+        var tv = sel_tv.value
+        var preco = in_preco.value
+
+        resultado.innerHTML = ``
+        resultado2.innerHTML = ``
+
+        if (tv && preco < 800 || preco > 2000) {
+            resultado.innerHTML = `TV fora da faixa de preço`
+
+            if (tv && preco < 800) {
+                resultado2.innerHTML = `Preço baixo demais!`
+            }
+
+            if (tv && preco > 2000) {
+                resultado2.innerHTML = `TV cara demais, infelizmente`
+            }
+
+        }
+
+        if (tv == 3 && preco >= 800 && preco <= 2000 || tv == 4 && preco >= 800 && preco <= 2000) {
+            resultado.innerHTML = `Na faixa de preço, porém marca não confiável`
+        }
+
+        if (tv == 1 && preco >= 800 && preco <= 2000 || tv == 2 && preco >= 800 && preco <= 2000) {
+            resultado.innerHTML = `Essa TV pode entrar na sua lista!`
+        }
+
+
+    }
+</script>
+
+
+<!-- 3. George está pesquisando por uma nova TV de 55" que seja 4k. Porém, ele é super desconfiado com preços muito baixos e possui um teto limite, ou seja, um valor máximo que está disposto a pagar.   
+Assim, crie para ele um programa em HTML/JS o qual:  
+a) Solicite a marca da TV numa combo (com as opções "Samsung", "LG", "Mondial" e "Britânia");  
+b) Solicite o preço da TV;  
+c) Ao clicar em "Analisar compra", podem aparecer as seguintes mensagens na tela:  
+   c.1) "TV fora da faixa de preço", caso a TV custar menos que 800 ou mais que 2000;  
+   c.2) "Na faixa de preço, porém marca não confiável", caso esteja na faixa entre 800 e 2000, porém for da "Mondial" ou "Britânia" ; 
+   c.3) Caso tenha exibido a mensagem de c.1), exiba também essa outra frase, caso custar menos de 800: "Preço baixo demais!". Ou, caso custar mais de 2000, exiba esta: "TV cara demais, infelizmente" ;
+   c.4) Caso a TV esteja na faixa de preço e for da "LG" ou "Samsung", exiba "Essa TV pode entrar na sua lista!"  -->

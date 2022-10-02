@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 6</title>
+
+</head>
+
+<body>
+    <h1>Simulação De Descontos</h1>
+    Insira o nome do produto que o usuário comprará <input type="text" id="in_produto"> <br>
+    Insira o preço original do produto <input type="number" id="in_preco"> <br>
+    Insira o cupom de desconto para ser aplicado <input type="text" id="in_desconto"> <br>
+    <button onclick="desconto()">Aplicar Desconto</button> <br>
+    <div id="resultado"></div>
+
+
+</body>
+
+</html>
+<script>
+
+    function desconto() {
+        var produtos = in_produto.value
+        var produto = produtos.toLowerCase()
+        var preco = Number(in_preco.value)
+        var desconto = in_desconto.value
+        var porcento = preco - (preco * 0.1)
+        porcento1 = preco - (preco * 0.19)
+
+        resultado.innerHTML = ``
+
+        if (produto == '') {
+            alert(`Insira um produto para prosseguir`)
+        } else if (preco == '') {
+            alert(`Insira um preço para prosseguir!`)
+        } else if (desconto == '') {
+            alert(`Insira um cupom para prosseguir!`)
+
+        }
+
+
+        if (produto != 'tênis','livros','material escolar','celular','notebook','tablet' && desconto != 'GERAL_10','TECH_19') {
+            resultado.innerHTML = `Cupom não aplicado! Preencha os campos e tente novamente!`
+        }
+
+        if (produto == 'tênis' && desconto == 'GERAL_10' || produto == 'livros' && desconto == 'GERAL_10' || produto == 'material escolar' && desconto == 'GERAL_10') {
+            resultado.innerHTML = `Cupom para produtos em geral aplicado! Preço final será R$${porcento}`
+        }
+
+        if (produto == 'celular' && desconto == 'TECH_19' || produto == 'notebook' && desconto == 'TECH_19' || produto == 'tablet' && desconto == 'TECH_19') {
+            resultado.innerHTML = `Cupom para produtos tecnológicos foi aplicado! Preço final será R$${porcento1}`
+        }
+
+        
+    
+    }
+
+
+
+
+</script>
+
+
+
+<!-- 6. Crie um programa em HTML/JS que simule descontos baseados em cupons, em que: 
+a) Solicite o nome do produto que o usuário comprará; 
+b) Solicite o preço original do produto; 
+c) Solicite o cupom de desconto para ser aplicado; 
+d) Ao clicar em “Aplicar Desconto”, faça as devidas validações, onde: 
+    d.1) Caso o produto esteja vazio, exiba em um alerta “Insira um produto para prosseguir!” e finalize; 
+    d.2) Caso o preço esteja vazio, exiba em um alerta “Insira um preço para prosseguir!” e finalize; 
+    d.3) Caso o cupom esteja vazio, exiba em um alerta “Insira um cupom para prosseguir!” e finalize; 
+    d.4) Se passou em todas as validações anteriores, siga para o item e); 
+e) Valide o produto e aplique o desconto devidamente, onde:  
+    e.1) Caso o produto seja “tênis”, “livros” ou “material escolar” e o cupom inserido seja “GERAL_10”, aplique 10% de desconto sobre o valor original do produto em b) e exiba abaixo do botão a frase: 
+        - “Cupom para produtos em geral aplicado! Preço final será R$X”; 
+    e.2) Caso o produto seja “celular”, “notebook” ou “tablet” e o cupom inserido seja “TECH_19”, aplique 19% de desconto sobre o valor original do produto em b) e exiba abaixo do botão a frase:  
+        - “Cupom para produtos tecnológicos foi aplicado! Preço final será R$X”; 
+    e.3) Caso o produto e o cupom inseridos sejam diferentes das validações em e.1) e e.2) exiba abaixo do botão a frase:  
+        - “Cupom não aplicado! Preencha os campos e tente novamente!”;
+OBS: o cupom de desconto deve ter exatamente essa sintaxe (“GERAL_10” ou “TECH_19”);
+OBS2: já para os produtos, o usuário pode digitar tanto em caracteres minúsculos quanto maiúsculos, e o seu código deverá realizar a validação de forma padronizada (se ele digitou “CELULAR”, “Celular”, “celular”, ou "CeLuLaR" deve ser considerado válido se o cupom de desconto também estiver correto); -->

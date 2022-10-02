@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <h1>Sistema de Login</h1>
+    Insira o login do usuário <input type="text" id="in_login"> <br>
+    Insira a senha do usuário <input type="text" id="in_senha"> <br>
+    Insira o código de segurança do usuário <input type="number" id="in_seguranca"> <br>
+    <Button onclick="validar()">Validar</Button>
+    <div id="resultado"></div>
+
+</body>
+</html>
+<script>
+ function validar() {
+var login = in_login.value
+var senha =  (in_senha.value)
+var seguranca = Number (in_seguranca.value)
+
+if (login == 'SPTECH' && senha == 'SCHOOL' || seguranca == 595) {
+    resultado.innerHTML = `Usuário autenticado com sucesso.`
+} else {
+    resultado.innerHTML = `Falha na autenticação.`
+}
+
+ }
+
+</script>
+
+<!-- 2. Crie um programa em HTML/JS que simule um pequeno sistema de login, assim:   
+a) Solicite o login do usuário;   
+b) Solicite a senha do usuário;  
+c) Solicite o código de segurança do usuário;  
+d) Faça as devidas validações, e em seguida exiba:   
+   d.1) “Usuário autenticado com sucesso”, caso o login seja “SPTECH” e a senha seja “SCHOOL” ou caso o código de segurança seja “595”; 
+   d.2) “Falha na autenticação”, caso não exiba a mensagem em d.1);   -->

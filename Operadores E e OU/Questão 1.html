@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Arroz</h1>
+    <select name="" id="sel_arroz">
+        <option value="1">Arroz branco</option><br>
+        <option value="2">Arroz integral</option><br>
+    </select>
+
+    <br>Tempo de cozimento <input type="number" id="in_minuto">
+    <br>Quantidade de sal <input type="number" id="in_Sal"> <br>
+    <button onclick="Avaliar_arroz()">Avaliar arroz</button> <br>
+    <div id="resultado"></div>
+    <div id="imagem"></div>
+</body>
+
+</html>
+<script>
+    function Avaliar_arroz() {
+        var arroz = sel_arroz.value
+        var minuto = Number(in_minuto.value)
+        var sal = Number(in_Sal.value)
+
+
+        if (arroz == 1 && minuto == 10 && sal <= 10 || arroz == 2 && minuto == 20 && sal <= 15) {
+            if (arroz == 1) {
+                imagem.innerHTML = `<img src="https://images.aws.nestle.recipes/resized/508e90cc752880608500ad1646fd510e_ARROZ-BASICO-RECEITAS-NESTLE_1200_600.jpg" alt="arroz" width="200px">`
+            }
+                if (arroz == 2) {
+                    imagem.innerHTML = `<img src="https://img.itdg.com.br/tdg/images/recipes/000/114/954/44015/44015_original.jpg?mode=crop&width=710&height=400" alt="arroz" width="200px">`
+
+                } resultado.innerHTML = `Arroz perfeito <br>`
+
+                } else {
+                    resultado.innerHTML = `Seu arroz não está perfeito <br> <img src="https://noticiasdatv.uol.com.br/media/uploads/erick-jacquin-freezer-bronca-pesadelo-na-cozinha-reproducao-band-min.jpg" alt="arroz" width="200px">`
+                    imagem.innerHTML = ``
+                }
+            }
+
+</script>
+
+
+<!-- 1 (DESAFIO). Crie um programa em HTML/JS o qual:
+OBS: Use, necessariamente pelo menos um "ou" (||)
+a) Pergunte numa combo o tipo de arroz usado (integral ou branco);
+b) Pergunte o tempo de cozimento, em minutos;
+c) Pergunte a quantidade de sal usada, em gramas;
+d) Ao clicar em "Avaliar arroz", exiba, abaixo dele...
+    A frase "Arroz perfeito", caso:
+      Em caso de arroz branco, 10 minutos e até 10g de sal;
+      Em caso de arroz integral, 20 minutos e até 15g de sal;
+   A frase "Seu arroz não está perfeito", caso nenhum dos critérios anteriores tenha sido alcançado
+e) No caso de arroz perfeito, exiba também a imagem de um belo arroz, branco ou integral, conforme o tipo selecionado. Caso contrário, exiba a cara do Jacquin bravo (aquele famoso meme), independe do tipo de arroz. -->

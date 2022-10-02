@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+<body>
+    <h1>Pokémon</h1>
+
+    <img src="https://miro.medium.com/max/790/1*PyLMO3lmzeqc-w7psiOMdQ.png" alt="" width="200px">
+
+    <h3><i>Treinador Iniciante: </i></h3>
+    
+    Selecione o tipo do Pokemon: <select name="" id="sel_primeiro_treinador">
+        <option value="1">Planta</option>
+        <option value="2">Água</option>
+        <option value="3">Fogo</option>
+    </select> <br>
+
+
+    <h3><i>Treinador Oponente: </i></h3>
+
+    Selecione o tipo do Pokemon: <select name="" id="sel_segundo_treinador">
+        <option value="1">Planta</option>
+        <option value="2">Água</option>
+        <option value="3">Fogo</option>
+    </select> <br> <br>
+
+    <button onclick="Batalhar()">Batalhar!</button> <br> <br> <br>
+    <div id="resultado"></div>
+    <div id="contagem"></div>
+
+</body>
+</html>
+<script>
+
+    var vitoria = 0
+    var empate = 0
+    var derrota = 0
+
+function Batalhar() {
+    var treinador = sel_primeiro_treinador.value
+    var oponente = sel_segundo_treinador.value
+   
+
+    resultado.innerHTML= ``
+    contagem.innerHTML = ``
+
+    if (treinador == 1 && oponente == 1 || treinador == 2 && oponente == 2 || treinador == 3 && oponente == 3) {
+        resultado.innerHTML= `A batalha empatou!`
+        contagem.innerHTML = `Vitórias do Iniciante: ${vitoria} / Derrotas do Iniciante: ${derrota} / Empates: ${++empate}`
+    }
+
+    if (treinador == 1 && oponente == 2 || treinador == 2 && oponente == 3 || treinador == 3 && oponente == 1) {
+        resultado.innerHTML= `O iniciante ganhou!`
+        contagem.innerHTML = `Vitórias do Iniciante: ${++vitoria} / Derrotas do Iniciante: ${derrota} / Empates: ${empate}`
+    }
+
+    if (treinador == 2 && oponente == 1 || treinador == 3 && oponente == 2 || treinador == 1 && oponente == 3) {
+        resultado.innerHTML= `O iniciante perdeu!`
+        contagem.innerHTML = `Vitórias do Iniciante: ${vitoria} / Derrotas do Iniciante: ${++derrota} / Empates: ${empate}`
+    }
+}
+    
+</script>
+
+
+<!-- 5. No desenho animado da franquia “Pokémon”, temos diversos tipos de monstrinhos que batalham entre si para se tornarem cada vez mais fortes, podendo evoluir.   
+No início da jornada, os novos treinadores devem escolher seu primeiro Pokémon dentre os tipos “Planta”, “Água” ou “Fogo”, conhecido como “Pokémon Inicial”.  
+Para as batalhas, temos uma ordem de grandeza, onde:  
+    - Planta ganha de Água;  
+    - Água ganha de Fogo;  
+    - Fogo ganha de Planta;  
+    - Pokémons de mesmo tipo irão empatar na batalha;  
+ Crie um programa em HTML/JS que auxilie os novos treinadores a calcularem suas vantagens em sua primeira batalha:  
+d) Caso os tipos selecionados sejam iguais, exiba “A batalha empatou!” e pule as validações item e); 
+e) Mas caso os tipos selecionados sejam diferentes, continue validando:  
+    e.1) Exiba “O iniciante venceu!” na tela caso o tipo selecionado em “INICIANTE” tenha vantagem sobre o tipo selecionado em "OPONENTE”; 
+    e.2) Exiba "O iniciante perdeu!” na tela caso o tipo selecionado em “OPONENTE” tenha vantagem sobre o tipo selecionado em “INICIANTE”; 
+f) Abaixo da mensagem de "empate", "vitória" ou "derrota", exiba:  
+    “Vitórias do Iniciante: X / Derrotas do Iniciante: Y / Empates: Z” 
+OBS: Para validar o item e.1), utilize SOMENTE UM “if” com os operadores “E” e “OU” para ver se o iniciante ganhou; 
+OBS2: Deve-se utilizar 3 variáveis diferentes para a mensagem em f); 
+Exemplo de funcionamento:  
+    - Iniciante = Fogo 
+    - Oponente = Planta 
+    - Mensagem = “O iniciante venceu!” 
+    - Contagem = “Vitórias do Iniciante: 1 / Derrotas do Iniciante: 0 / Empates: 0” 
+
+    - Iniciante = Água
+    - Oponente = Planta
+    - Mensagem = "O iniciante perdeu!"
+    - Contagem = "Vitórias do Iniciante: 1 / Derrotas do Iniciante: 1 / Empates: 0"
+
+  -->
