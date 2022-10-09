@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 13</title>
+</head>
+
+<body>
+    <h1>Taboada</h1>
+
+    Selecionar Número:
+    <select name="" id="sel_tabuada">
+        <option id="1">1</option>
+        <option id="2">2</option>
+        <option id="3">3</option>
+        <option id="4">4</option>
+        <option id="5">5</option>
+        <option id="6">6</option>
+        <option id="7">7</option>
+        <option id="8">8</option>
+        <option id="9">9</option>
+        <option id="10">10</option>
+    </select>
+    Insira até que número a tabuada deve ser construída <input type="number" id="in_numero">
+    <button onclick="ver()">Ver Tabuada</button> <br>
+    <div id="resultado"></div>
+
+
+   
+
+</body>
+
+</html>
+<script>
+    function ver() {
+        var tabuada = sel_tabuada.value
+        var numero = Number (in_numero.value)
+        contador = 1
+        resultado.innerHTML= ``
+
+        while (contador <= numero) {
+            var multiplicacao = tabuada * contador
+
+            if (multiplicacao % 2 == 1) {
+                resultado.innerHTML += `<br>  <div style="color:red ;">${tabuada} x ${contador} = ${multiplicacao}</div> `
+            } else if (multiplicacao % 2 == 0) {
+                resultado.innerHTML += `<br>  <div style="color:blue ;">${tabuada} x ${contador} = ${multiplicacao}</div> `
+            }
+
+            contador++
+
+        }
+    }
+
+
+</script>
+
+
+<!-- 13. Crie um programa o qual:
+
+a) Pergunte, numa combo, qual a tabuada que o usuário quer ver na tela (2 a 9)
+
+b) Pergunte até que número a tabuada deve ser construída
+
+c) Ao clicar no botão “Ver Tabuada”, exiba abaixo a tabuada como neste exemplo (considerando que o usuário escolheu a tabuada do 3 e para ir até o 12)
+
+    3 x 1 = 3
+    3 x 2 = 6
+
+    3 x 3 = 9
+    3 x 4 = 12
+    3 x 5 = 15
+    3 x 6 = 18
+    3 x 7 = 21
+    3 x 8 = 24
+    3 x 9 = 27
+
+    3 x 10 = 30
+
+    3 x 11 = 33
+
+    3 x 12 = 36
+
+d) Observar que quando o multiplicador for ímpar, a linha apareça na cor vermelha e quando for par, na cor azul. ex: "3 x 1 = 3" aparecer tudo em vermelho, mas "3 x 4 = 12" aparece tudo em azul. -->

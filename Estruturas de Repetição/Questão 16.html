@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 18</title>
+</head>
+<body>
+    <h1>Simulador</h1>
+   Insira quantas pessoas vão entrar no carro <input type="text" id="in_carro">
+   Insira a capacidade de passageiros que o veículo suporta <input type="text" id="in_quantidade">
+   <button onclick="analisar()">#Partiu Carona</button>
+   <div id="resultado"></div>
+</body>
+</html>
+<script>
+
+    function analisar() {
+        var carro = in_carro.value
+        var quantidade = in_quantidade.value
+        contador = 0
+        resultado.innerHTML = ``
+
+        while (contador <= carro) {
+            if (contador == 1) {
+                resultado.innerHTML += `<br> Entrou o ${contador}º passageiro (que é o(a) motorista) `
+            } else if (contador >= 2 && contador <= quantidade) {
+                resultado.innerHTML += `<br> Entrou o ${contador}º passageiro`
+            } else if (contador > quantidade) {
+                resultado.innerHTML += `<br> O ${contador}º passageiro terá que esperar!`
+            }
+
+            contador++
+        }
+    }
+</script>
+
+
+<!--  16. Incremente a questão anterior de tal forma que:
+
+a) Também tenha um campo no qual o usuário indique a capacidade de passageiros que o veículo suporta
+
+b) Ao clicar no botão, as frases só começam a mostrar que o passageiro terá que esperar quando a capacidade indicada em a) for excedida
+ -->

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 20</title>
+</head>
+
+<body>
+    <h1>Simulador de trajeto</h1>
+    Insira quantos ônibus você precisa pegar <input type="number" id="in_onibus">
+    Insira quantos quantos trens você precisa pegar <input type="number" id="in_trens">
+    Insira quantos quantos metrôs precisa pegar <input type="number" id="in_metros">
+    <button onclick="trajeto()">#Partiu Trajeto</button>
+    <div id="resultado"></div>
+    <div id="resultado1"></div>
+    <div id="resultado2"></div>
+</body>
+
+</html>
+<script>
+    function trajeto() {
+        var onibus = in_onibus.value
+        var trens = in_trens.value
+        var metros = in_metros.value
+        contador = 1
+        contador2 = 1
+        contador3 = 1
+        resultado.innerHTML = ``
+        resultado1.innerHTML = ``
+        resultado2.innerHTML = ``
+
+        if (onibus < 0 || trens < 0 || metros < 0) {
+            alert(`Valores inválidos, por favor insira um número maior que 0`)
+        }
+
+        if (onibus == 0) {
+            resultado.innerHTML = `NÃO PRECISOU PEGAR O ÔNIBUS <br>`
+        }
+
+        if (trens == 0) {
+            resultado.innerHTML += `NÃO PRECISOU PEGAR O TREM <br>`
+        }
+
+        if (metros == 0) {
+            resultado.innerHTML += `NÃO PRECISOU PEGAR O METRÔ <br>`
+        }
+
+        if (onibus == 0 && trens == 0 && metros == 0) {
+            resultado.innerHTML = `    <div style="color: yellow">
+OPS... Parece que esse veio de helicóptero!!! Kkk</div>`
+        }
+
+
+
+        while (contador <= onibus) {
+            if (contador == 1) {
+                resultado.innerHTML += `<div style="color:red;">Pegando o ${contador}º buzão</div>`
+
+            } else if (contador == 2) {
+                resultado.innerHTML += `<div style="color:red;">Pegando o ${contador}º buzão, Começando a cansar</div> `
+            } else if (contador >= 3) {
+                resultado.innerHTML += `<div style="color:red;">Pegando o ${contador}º buzão, Já cansado!</div> `
+            }
+
+            contador++
+        }
+
+
+        while (contador2 <= trens) {
+            if (contador2 <= 1) {
+                resultado.innerHTML += `<div style="color:green;">Pegando o ${contador2}º trem</div>`
+            } else if (contador2 == '') {
+                resultado.innerHTML += `<div style="color:green;">cagar</div>`
+            } else if (contador2 == 2) {
+                resultado.innerHTML += `<div style="color:green;">Pegando o ${contador2}º trem, Começando a cansar</div>`
+            } else if (contador2 >= 3) {
+                resultado.innerHTML += `<div style="color:green;">Pegando o ${contador2}º trem, Já cansado!</div>`
+            }
+
+            contador2++
+        }
+
+
+        while (contador3 <= metros) {
+            if (contador3 <= 1) {
+                resultado2.innerHTML += `<div style="color:blue;">Pegando o ${contador3}º metrô</div>`
+            } else if (contador3 == 2) {
+                resultado2.innerHTML += `<div style="color:blue;">Pegando o ${contador3}º metrô, Começando a cansar</div>`
+
+            } else if (contador3 >= 3) {
+                resultado2.innerHTML += `<div style="color:blue;">Pegando o ${contador3}º metrô, Já cansado!</div>`
+            }
+
+            contador3++
+        }
+
+    }
+
+
+</script>
+
+
+
+<!-- 19. Incremente a questão anterior.
+
+    Validar os campos de entrada, sendo que a quantidade de ônibus, trem e metrô não pode ser negativa, em caso de erro emitir alerta com mensagem explicativa. E não seguir em frente.
+
+    Se as três quantidades forem iguais a zero, exibir somente a frase: “OPS... Parece que esse veio de helicóptero!!!  Kkk”, na cor amarela.
+
+    Para alguma quantidade igual a zero emitir a mensagem “NÃO PRECISOU PEGAR O XXXXX”, onde o XXXXX é buzão, trem ou metrô conforme a quantidade que está zerada.  -->

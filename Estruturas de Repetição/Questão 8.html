@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 8</title>
+</head>
+
+<body>
+    <h1>Múltiplos de 7</h1>
+    Insira um número entre 0 e 200 <input type="number" id="in_numero">
+    <button onclick="viva()">Viva o 7</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+<script>
+    function viva() {
+
+        var numero = Number(in_numero.value)
+        var contador = 0
+        resultado.innerHTML = ``
+
+        while (contador <= numero) {
+            if (contador % 7 == 0) {
+                resultado.innerHTML += `${contador} <br>`
+            }
+
+            contador++
+
+        }
+
+
+
+    }
+</script>
+
+<!-- 8. Crie um programa o qual:
+
+a) Receber um número (tem que estar entre 0 e 200)
+
+b) Ter um botão chamado "Viva o 7!"
+
+c) Ao clicar nesse botão, devem aparecer todos os múltiplos de 7 entre 0 e o número informado em a)
+
+c) ATENÇÃO! Use a técnica de dedução de múltiplos por uso do resto da divisão e não usando a técnica de incrementar em 7. Para saber se um número é múltiplo de 7, basta descobrir se o resto da divisão dele por 7 é 0.  
+ -->

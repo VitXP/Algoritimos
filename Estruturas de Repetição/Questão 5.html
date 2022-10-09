@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+<body>
+    <h1>Cabalísticos</h1>
+    <button onclick="verificar()">Números Cabalísticos</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+    function verificar() {
+        var numero = 0
+        resultado.innerHTML = ``
+
+        while (numero <= 30) {
+            if (numero != 3  && numero !=4 &&  numero !=7 && numero != 12 ) {
+            resultado.innerHTML += `${numero}<br><br>`
+            }
+
+           numero ++
+    
+        }
+
+    }
+</script>
+<!-- 5. Crie um programa o qual:
+
+a) Ao clicar num botão "Números cabalísticos"...
+
+c) Exiba, debaixo do botão, os números de 1 a 30, um embaixo do outro, PORÉM, não devem aparecer os números cabalísticos 3, 4, 7, 10 e 12. -->

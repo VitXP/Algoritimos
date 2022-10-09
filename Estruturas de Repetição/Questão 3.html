@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Covid19</h1>
+    <button onclick="diga()">Diga algo sobre a pandemia de Covid19</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+function diga() {
+var contador = 0
+var numero = 1
+resultado.innerHTML = ``
+
+while (contador <7) {
+    resultado.innerHTML += `${numero}. Respire fundo, tenha fé e acredite na força e no amor de Deus para seguir acreditando em um mundo melhor, mais saudável e mais pacífico. <br><br>`
+    contador++
+    numero++
+}
+}
+</script>
+<!-- 3. Refaça o programa anterior de tal forma que, antes de cada frase apareça um contador. Ex: Se a frase digitada foi “Boa Tarde” a página ficará assim:
+   1. Boa tarde
+   2. Boa tarde
+   ...
+   7. Boa tarde
+ -->

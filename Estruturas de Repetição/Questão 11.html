@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 11</title>
+</head>
+
+<body>
+    <h1>Títulos mundiais da FIFA</h1>
+    Insira a quantidade de títulos mundiais da FIFA que seu clube tem <input type="number" id="in_mundial">
+    <button onclick="fifa()">Ver troféus de mundiais FIFA</button>
+    <br> <br>
+    <div id="resultado"></div>
+
+
+</body>
+
+</html>
+<script>
+
+    function fifa() {
+        var quantidade = in_mundial.value
+        contador = 1
+        resultado.innerHTML = ``
+
+        while (contador <= quantidade) {
+            if (quantidade > 0) {
+                resultado.innerHTML += `<img src="https://img.freepik.com/vetores-premium/trofeu-de-ouro-realista-cercado-por-confetes-caindo_48799-1706.jpg?w=360" alt="troféu" width="200px ">`
+            }
+
+
+            contador++
+
+        }
+    
+        if (quantidade <= 0) {
+            resultado.innerHTML = `<img src="https://s2.glbimg.com/-1nV9kSlTKDAyp_v8KWXOaRuynY=/0x0:1900x1362/1008x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2018/6/z/PZDLmiQMCoZmD1MCbfdw/soccer-worldcup-bra-bel-2018-07-06t201039z-360963230-rc1e2f58a5e0-rtrmadp-3-soccer-worldcup-bra-bel-sergio-perez-reuters.jpg" alt="chorando" width="200px">`
+        }
+        }
+
+</script>
+
+<!-- 11. Crie um programa o qual:
+
+a) Solicite ao usuário a quantidade de títulos mundiais da FIFA que seu clube tem
+
+b) Ao clicar num botão "Ver troféus de mundiais FIFA"...
+
+c) Devem aparecer, abaixo do botão, N imagens de um troféu, onde N é o valor informado em a). Porém...
+
+d) Caso o valor informado em a) seja 0 ou menos, a imagem que deve aparecer apenas uma vez abaixo do botão é de um torcedor do time chorando
+ -->
