@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Partida de dadinho</h1>
+
+    <button onclick="jogador1()">Jogador 1 jogar dadinho</button> <br>
+    <button onclick="jogador2()">Jogador 2 jogar dadinho</button> <br><br>
+
+    <div id="div_resultado"></div>
+    <div id="div_resultado2"></div>
+    <div id="div_resultado3"></div>
+
+</body>
+
+</html>
+<script>
+    div_resultado.innerHTML = ``
+    div_resultado2.innerHTML = ``
+    div_resultado3.innerHTML = ``
+
+    var sorteador1 = parseInt(Math.random() * 7)
+    var sorteador2 = parseInt(Math.random() * 7)
+
+    function jogador1() {
+        div_resultado.innerHTML = `O valor sorteado foi ${sorteador1}`
+    }
+
+    function jogador2() {
+        div_resultado2.innerHTML = `O valor sorteado foi ${sorteador2}`
+
+        if (sorteador1 > sorteador2) {
+            div_resultado3.innerHTML = `Jogador 1 venceu`
+        } else if (sorteador2 > sorteador1) {
+            div_resultado3.innerHTML = `Jogador 2 venceu`
+        } else {
+            div_resultado3.innerHTML = `Empate`
+        }
+    }
+
+
+
+
+
+</script>
+
+<!--10. Crie um programa o qual:
+
+a) Tenha um botão "Jogador 1 jogar dadinho" que faz aparecer, abaixo dele, o valor de um dadinho de 6 lados sorteado
+
+b) Tenha um botão "Jogador 2 jogar dadinho" que faz aparecer, abaixo dele, o valor de um dadinho de 6 lados sorteado
+
+c) Ainda após o clique do segundo botão, exiba abaixo de tudo uma dessas frases:
+   "Jogador [1 ou 2] venceu" caso um deles tenha vencido
+   "Empate", caso de empate
+  -->

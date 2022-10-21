@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+
+<body>
+    <h1>Sorteador de times</h1>
+    <button onclick="sortear()">Sortear time</button>
+    <div id="div_resultado"></div>
+
+</body>
+
+</html>
+<script>
+    function sortear() {
+        div_resultado.innerHTML = ``
+
+
+        var sorteador = Math.random() * 4
+        if (sorteador < 1) {
+            div_resultado.innerHTML = `<img src="https://logodetimes.com/times/sao-paulo/logo-sao-paulo-2048.png" alt="Escudos" height="150px">`
+        } else if (sorteador < 2) {
+            div_resultado.innerHTML = `  <img src="https://i.pinimg.com/originals/2d/00/29/2d0029b8ab40c38bb279a8464311b146.jpg" alt="Escudos"  height="150px">`
+        } else if (sorteador < 3) {
+            div_resultado.innerHTML = ` <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/America_FC-SJ_%28A1%29_-_SP.svg/1200px-America_FC-SJ_%28A1%29_-_SP.svg.png" alt="Escudos" height="150px">`
+        } else {
+            div_resultado.innerHTML = `<img src="https://upload.wikimedia.org/wikipedia/pt/c/c7/BotafogoFCSP2021.png" alt="Escudos" height="150px">`
+        }
+    }
+</script>
+
+<!-- 2. Crie um programa o qual:
+
+a) Ao clicar no botão "Sortear time", faz aparecer somente um dos escudos dos 4 times de futebol de maior torcida do estado de São Paulo. Independente da imagem, todas devem ter 150px de altura.
+ -->
