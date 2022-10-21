@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+<body>
+    <h1>Contador</h1>
+    Insira o limite inferior da amostragem <input type="number" id="in_limiteinferior">
+    Insira o limite superior da amostragem <input type="number" id="in_limite">
+    <button onclick="contar()">Contar</button>
+    <div id="resultado"></div>
+</body>
+</html>
+<script>
+function contar() {
+    var limitesuperior = Number (in_limite.value)
+    var limiteinferior = Number (in_limiteinferior.value)
+    resultado.innerHTML = ``
+
+        if (limitesuperior > 99) {
+            resultado.innerHTML = `O número inserido tem que ser menor que 100`
+        } else if (limiteinferior < 1) {
+            resultado.innerHTML = `O número inserido tem que ser maior que 1`
+        } else {
+            for (contador = limiteinferior;contador <= limitesuperior;contador ++) {
+                if (contador % 2 == 1) {
+                resultado.innerHTML += `${contador}<br>`
+                }
+            }
+        }
+        
+    }
+</script>
+
+
+
+<!-- 5. (desafio) Crie um programa o qual
+
+a) Receba o limite inferior da amostragem. Esse número que ser maior que 1, caso contrário emitir mensagem explicativa e não seguir em frente.  
+
+b) Receba o limite superior da amostragem. Esse número que ser menor que 100, caso contrário emitir mensagem explicativa e não seguir em frente
+
+c) Tenha num botão "Contar" que quando clicado exiba somente os números ímpares desde o limite inferior (item a.) até o limite superior (item b.) -->

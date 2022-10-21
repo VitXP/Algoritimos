@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 8</title>
+</head>
+
+<body>
+    <h1>Coca-Cola</h1>
+    Insira a quantidade de Coca-Cola que você já bebeu na vida: <input type="number" id="in_coca">
+    <button onclick="quantidade()">Ver a quantidade</button> <br>
+    <div id="resultado"></div> <br>
+</body>
+
+</html>
+<script>
+    function quantidade() {
+        var coca = Number(in_coca.value)
+        resultado.innerHTML = ``
+
+
+        for (contador = 1; contador <= coca; contador++) {
+            resultado.innerHTML += `    <img src="https://ibassets.com.br/ib.item.image.big/b-23d50f41824e479a87f0a9e391c374e9.jpeg" alt="coca" width="150vh">
+`
+        }
+    }
+</script>
+<!-- 8. Crie um programa no qual:
+a) O usuário informe quantas "Coca-Cola" ele acha que já bebeu na vida
+b) Ao clicar em "Ver a quantidade", devem aparecer na tela N garrafinhas (ou latas, se preferir) de "Coca-Cola" uma ao lado da outra, conforme a quantidade informada em a)
+c) Para saber se seu programa está correto, teste algo assim: informe 20 e clique. Depois informe só 3 e clique novamente. Veja se vão aparecer só 3 garrafinhas (ou latas) na tela. 
+
+ -->

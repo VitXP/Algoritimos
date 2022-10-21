@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova</title>
+</head>
+
+<body>
+    <h1>Naruto (CLONES)</h1>
+    Insira a quantidade de pontos de “energia” que o Naruto tem <input type="number" id="in_energia"> <br>
+    Insira a quantidade de clones desejada <input type="number" id="in_clone"> <br>
+    Insira a a quantidade de clones por linha <input type="number" id="in_linha"> <br>
+    <button onclick="criar()">Criar clones</button> <br>
+    <div id="resultado"></div>
+    <div id="resultado2"></div>
+
+</body>
+
+</html>
+<script>
+    function criar() {
+        var energia = Number(in_energia.value)
+        var clone = Number(in_clone.value)
+        var linha = Number(in_linha.value)
+        var validação = clone * 20
+        clones = 0
+
+        resultado.innerHTML = ``
+        resultado2.innerhtml = ``
+
+        if (energia < 20 || energia > 5000) {
+            alert(`“ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0”.`)
+            
+        }
+
+        if (clone > 250) {
+            alert(`“ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0”.`)
+        }
+
+        if (linha <= 0) {
+            alert(`“ERRO NA ENTRADA DE DADOS – Energia tem que ser entre 20 e 5.000. Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0”.`)
+        }
+
+        if (energia >= validação) {
+            resultado.innerHTML = `<img src="https://preview.redd.it/tudjq02jost71.jpg?auto=webp&s=ed558eeba8ee7c136febe2cd0084d2ab3661b9eb" alt="Clones do naruto" width="200px"> <br>`
+            resultado2.innerHTML = `ANÁLISE DA GERAÇÃO DE CLONES
+
+                Energia Inicial: ${energia}  
+
+                Qtde de Clones: ${clone}
+
+                Sobra de Energia: ${energia - validação}`
+
+        } else {
+            alert(`Quantidade de energia baixa demais para a criação de clones`)
+            resultado2.innerhtml = ``
+        }
+
+
+    }
+
+</script>

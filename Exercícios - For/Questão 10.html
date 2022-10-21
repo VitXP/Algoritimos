@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 10</title>
+</head>
+<body>
+    <h1><i>Deposito Bancário</i></h1>
+    Insira quantos depósitos você fez no banco <input type="number" id="in_quantidade"> <br>
+    Insira o valor de cada depósito <input type="number" id="in_valor"><br>
+<BUtton onclick="acompanhar()">Acompanhar grana</BUtton> <br><br>
+<div id="resultado"></div>
+</body>
+</html>
+<script>
+
+
+    function acompanhar(){
+        var quantidade = Number (in_quantidade.value)
+        var valor = Number (in_valor.value)
+        resultado.innerHTML= ``
+        var deposito = 0
+
+        for (contador = 1; contador <= quantidade ; contador++) {
+        resultado.innerHTML += `${contador}º Mês: R$${deposito += valor} <br>`
+        }
+    }
+</script>
+
+<!-- 10. Crie um programa no qual:
+a) O usuário informa quantos depósitos ele fez no banco
+b) O usuário informa o valor de cada depósito, pois ele sempre depositava exatamente o mesmo valor
+c) Ao clicar em "Acompanhar grana", deve aparecer o valor, mês a mês, como neste exemplo
+
+    1º Mês: R$ 500.00
+
+    2º Mês: R$ 1000.00
+    3º Mês: R$ 1500.00
+    4º Mês: R$ 2000.00
+    5º Mês: R$ 2500.00
+    Total guardado: R$2500.00
+
+No exemplo acima, o usuário informou 5 depósitos e 500 por depósito.
+ -->
