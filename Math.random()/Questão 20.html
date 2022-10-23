@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 20</title>
+</head>
+
+<body>
+    <h1>jogo de dadinho 🎲</h1>
+    <button onclick="jogar()">Jogar</button>
+    <div id="resultado"></div><BR>
+        <div id="resultado2"></div>
+</body>
+
+</html>
+<script>
+
+    var empate = 0
+    var jogador1 = 0
+    var jogador2 = 0
+
+    function jogar() {
+        var dado1 = parseInt(1 + Math.random() * 6)
+        var dado2 = parseInt(1 + Math.random() * 6)
+
+        if (dado1 == dado2) {
+            empate++
+            resultado.innerHTML = ` <br>Jogador 1: ${jogador1}
+
+        <br>Jogador 2: ${jogador2}
+
+        <br>Empate: ${empate} `
+        } else if (dado1 > dado2) {
+            jogador1++
+            resultado.innerHTML = ` <br>Jogador 1: ${jogador1}
+
+        <br>Jogador 2: ${jogador2}
+
+        <br>Empate: ${empate} `
+        } else if (dado1 < dado2) {
+            jogador2++
+
+            resultado.innerHTML = ` <br>Jogador 1: ${jogador1}
+
+        <br>Jogador 2: ${jogador2}
+
+        <br>Empate: ${empate} `
+        }
+
+
+        if (jogador1 == jogador2) {
+            resultado2.innerHTML = `Jogo empatado`
+        } else if (jogador1 > jogador2) {
+            resultado2.innerHTML = `O jogador 1 está vencendo`
+        } else if (jogador1 < jogador2) {
+            resultado2.innerHTML = `O jogador 2 está vencendo`
+        }
+    }
+</script>
+<!-- 20. Crie um programa o qual simule um jogo de dadinho, onde:
+
+a) Tenha o seguinte texto:
+
+Jogador 1: 0
+
+Jogador 2: 0
+
+Empate:     0
+
+b) Ao clicar no botão “Jogar” sorteie um valor de 1 a 6 para o dadinho 1 e outro valor para o dadinho 2 e some 1 no placar do item a) de acordo com o resultado.
+
+c) Emita a mensagem “O jogador X está vencendo”, onde X é o nº do jogador vencedor. Caso esteja empatado o jogo, a mensagem será “Jogo empatado” -->

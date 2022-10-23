@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 12</title>
+</head>
+
+<body>
+    <h1>Sorteador 🎲</h1>
+    Insira ao usuário seu número da sorte <input type="number" id='in_numero' placeholder="entre 0 e 100">
+    <button onclick="valendo()">Valendo!</button>
+    
+</body>
+
+</html>
+<script>
+
+    function valendo() {
+        var numero = Number(in_numero.value)
+        var sorteador = parseInt(Math.random() * 100)
+        
+        for (; ;) 
+
+        if (numero) {
+                alert(`Foram necessários ${sorteador} sorteios.`)
+    break
+        } 
+    }
+
+</script>
+
+
+
+<!-- 12. Crie um programa que
+
+a) Solicite ao usuário seu número da sorte, entre 0 e 100.
+
+b) Ao clicar em "Valendo!", o programa fica sorteando números aleatórios quantas vezes forem necessárias até que seja sorteado o número informado em a).
+
+c) Quando o número for finalmente sorteado, deve aparecer ou um alerta ou na página mesmo uma frase como esta:
+
+Foram necessários X sorteios -->

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 18</title>
+</head>
+
+<body>
+    <h1>Números da Sorte 🎲</h1>
+    <input type="text" id="in_nome" placeholder="Insira o seu nome">
+    <input type="number" id="in_1" placeholder="Insira o seu número da sorte">
+    <button onclick="sorte()">Sortear</button>
+    <div id="resultado2"></div>
+</body>
+
+</html>
+<script>
+    function sorte() {
+        var numero1 = Number(in_1.value)
+        var nome = in_nome.value
+        var sorteador = parseInt(1 + Math.random() * 10)
+        resultado2.innerHTML = ``
+
+        if (numero1 <1 || numero1 >10 ) {
+alert(`Valor inválido, digite um número entre 1 e 10`)
+} else {
+
+        for (; ;)
+
+            if (numero1) {
+                resultado2.innerHTML += `Parabéns, ${nome} o seu número da sorte ${numero1} foi sorteado após ${sorteador} sorteios!”<br>`
+
+                break
+            }
+        }
+    }
+</script>
+<!-- 
+18. Crie um programa o qual:
+
+a) Solicite ao usuário que digite seu nome e seu número inteiro da sorte. Esse número deve ser entre 1 e 10
+
+b) Ao clicar num botão "Sortear" valide se o usuário digitou entre 1 e 10. Caso não, exiba uma alert orientando sobre o erro. Caso contrário, faça um sorteio de números inteiros entre 1 e 10.  
+
+c) Caso o número sorteado em b) for o número da sorte informado em a), exiba um texto em qualquer lugar da página dizendo "Parabéns, YYYYYYY você foi sorteado(a) após X sorteios!", onde X é a quantidade de sorteios realizados e YYYYYYY é o nome do usuário
+ -->

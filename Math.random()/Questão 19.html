@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 19</title>
+</head>
+
+<body>
+    <h1>Números da Sorte 🎲</h1>
+    <input type="text" id="in_nome" placeholder="Insira o seu nome">
+    <input type="number" id="in_1" placeholder="Insira o seu número da sorte">
+    <input type="number" id="in_2" placeholder="Insira o seu número da sorte">
+    <input type="number" id="in_3" placeholder="Insira o seu número da sorte">
+    <button onclick="sorte()">Sortear</button> <br><br>
+    <div id="resultado1"></div>
+    <div id="resultado2"></div>
+    <div id="resultado3"></div>
+</body>
+
+</html>
+<script>
+    function sorte() {
+        var nome = in_nome.value
+        var numero1 = Number(in_1.value)
+        var numero2 = Number(in_2.value)
+        var numero3 = Number(in_3.value)
+        var sorteador1 = parseInt(1 + Math.random() * 10)
+        var sorteador2 = parseInt(1 + Math.random() * 10)
+        var sorteador3 = parseInt(1 + Math.random() * 10)
+        resultado1.innerHTML = ``
+        resultado2.innerHTML = ``
+        resultado3.innerHTML = ``
+
+        if (numero1 < 1 || numero1 > 10) {
+            alert(`Valor inválido, digite um número entre 1 e 10`)
+        } else {
+
+            for (; ;)
+
+                if (numero1) {
+                    resultado1.innerHTML += `Parabéns, ${nome} o seu número da sorte ${numero1} foi sorteado após ${sorteador1} sorteios!”<br>`
+
+                    break
+                }
+        }
+
+        if (numero2 < 1 || numero2 > 10) {
+            alert(`Valor inválido, digite um número entre 1 e 10`)
+        } else {
+
+            for (; ;)
+
+                if (numero2) {
+                    resultado2.innerHTML += `Parabéns, ${nome} o seu número da sorte ${numero2} foi sorteado após ${sorteador2} sorteios!”<br>`
+
+                    break
+                }
+        }
+
+        if (numero3 < 1 || numero3 > 10) {
+            alert(`Valor inválido, digite um número entre 1 e 10`)
+        } else {
+
+            for (; ;)
+
+                if (numero3) {
+                    resultado3.innerHTML += `Parabéns, ${nome} o seu número da sorte ${numero3} foi sorteado após ${sorteador3} sorteios!”<br>`
+
+                    break
+                }
+        }
+    }
+</script>
+</script>
+
+<!-- 19. Melhore o programa 16 permitindo que o usuário escolha até 3 números da sorte. Sendo que as mensagens ficarão: “Parabéns, YYYYYY o seu número da sorte 99 foi sorteado após X sorteios!”.
+ -->

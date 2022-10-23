@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 16</title>
+</head>
+
+<body>
+    <h1>Fases da Lua</h1>
+    <button onclick="ver()">Ver a Lua</button>
+    <div id="resultado"></div>
+</body>
+
+</html>
+
+<script>
+    function ver() {
+        resultado.innerHTML = ``
+
+        var sortear = parseInt(1 + Math.random() * 31)
+
+        if (sortear <= 7) {
+            resultado.innerHTML = `<img src="https://cdn.shopify.com/s/files/1/1061/1924/files/Dark_moon_emoji_icon_png_200x200.png" alt="Lua Nova" width="120px">
+`
+        } else if (sortear > 7 && sortear <= 16) {
+            resultado.innerHTML = `<img src="https://cdn.shopify.com/s/files/1/1061/1924/files/Full_moon_emoji_icon_png_200x200.png" alt="Lua Cheia" width="120px">
+`
+        } else if (sortear > 16 && sortear <= 22) {
+            resultado.innerHTML = `<img src="https://cdn.shopify.com/s/files/1/1061/1924/files/First_quarter_moon_emoji_icon_png_200x200.png" alt="Lua minguante" width="120px">
+`
+        } else {
+            resultado.innerHTML = `<img src="https://cdn.shopify.com/s/files/1/1061/1924/files/Waning_crescent_moon_emoji_icon_png_200x200.png" alt="Lua crescente" width="120px">
+`
+
+
+        }
+    }
+</script>
+
+<!-- 16. Crie um programa que simule as fases da lua:
+
+a) Ao clicar num botão "Ver a Lua", sorteie um dia do mês entre 1 e 31 e exiba o dia sorteado na página
+
+b) De acordo com o dia sorteado mostre uma fase da lua, conforme estes critérios (pode baixar e deixar as imagens locais se preferir):
+
+    Lua nova ()
+
+Caso o dia do mês for entre 1 e 7
+
+    Lua cheia ()
+
+Caso o dia do mês for entre 8 e 16
+
+    Lua minguante (https://cdn.shopify.com/s/files/1/1061/1924/files/First_quarter_moon_emoji_icon_png_200x200.png)    ; Caso o dia do mês for entre 17 e 22
+
+    Lua crescente () Caso o dia do mês for entre 23 e 31
+
+  -->

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 17</title>
+</head>
+<body>
+  <h1>Sorteio ímpar ou Par 🔢 </h1>
+  <button onclick="jogar()">Sortear número</button>
+  <div id="resultado"></div><BR>
+    <div id="resultado1"></div><BR>
+</body>
+</html>
+<script>
+  var par = 0
+  var impar = 0
+
+  function jogar() {
+    resultado.innerHTML = ``
+    resultado1.innerHTML = ``
+
+    var sortear = parseInt(-31 + Math.random() * 22)
+
+    if (sortear % 2 == 0) {
+
+      ++par 
+      resultado.innerHTML = `<br> Números pares: ${par} <br>Números ímpares:${impar}`
+      resultado1.innerHTML = `O número sorteado foi ${sortear}`
+    } else {
+      ++impar
+      resultado.innerHTML = `  <br> Números pares: ${par} <br>Números ímpares:${impar}`
+      resultado1.innerHTML = `O número sorteado foi ${sortear}`
+    }
+  }
+</script>
+
+<!-- 17. Crie um programa o qual:
+
+a) Tenho o seguinte texto:
+
+    Números pares: 0
+    Números ímpares: 0
+
+b) Um botão "Sortear número". Ao clicar nele, sortear um número entre -30 e -9, exiba abaixo do botão o número sorteado. Aumente um dos contadores do item a) conforme ele seja par ou ímpar
+
+  -->

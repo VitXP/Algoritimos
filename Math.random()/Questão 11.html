@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 11</title>
+</head>
+
+<body>
+    <h1>Pedra papel tesoura</h1>
+    <button onclick="jogar()">Jogar</button> <br><br>
+    <div id="resultado"></div> <br><br>
+    <div id="resultado2"></div> <br><br>
+</body>
+
+</html>
+<script>
+    function jogar() {
+        resultado.innerHTML = ``
+        resultado2.innerHTML = ``
+
+        var jokenpo = parseInt(Math.random() * 4)
+
+        if (jokenpo <= 1) {
+            resultado.innerHTML += ` <i>Jogador 1</i> <br>`
+            resultado.innerHTML += `<img src="https://jokenpo-lime.vercel.app/papel.png" alt="Papel" width="200px" height="200px">`
+        } else if (jokenpo >= 2 && jokenpo < 3) {
+            resultado.innerHTML += ` <i>Jogador 1</i> <br>`
+            resultado.innerHTML += `<img src="https://wesraiuga.github.io/games/assets/img/jokenpo/jokenpo-user-pedra.png" alt="Pedra" width="200px" height="200px">`
+        } else if (jokenpo >= 3) {
+            resultado.innerHTML += ` <i>Jogador 1</i> <br>`
+            resultado.innerHTML += `<img src="https://jokenpo-lime.vercel.app/tesoura.png" alt="Tesoura" width="200px" height="200px">`
+        }
+
+        var jokenpo1 = parseInt(Math.random() * 4)
+
+        if (jokenpo1 <= 1) {
+            resultado.innerHTML += `<br> <i>Jogador 2</i> `
+            resultado.innerHTML += `<br><img src="https://jokenpo-lime.vercel.app/papel.png" alt="Papel" width="200px" height="200px">`
+        } else if (jokenpo1 >= 2 && jokenpo1 < 3) {
+            resultado.innerHTML += ` <br><i>Jogador 2</i> `
+            resultado.innerHTML += `<br><img src="https://wesraiuga.github.io/games/assets/img/jokenpo/jokenpo-user-pedra.png" alt="Pedra" width="200px" height="200px">`
+        } else if (jokenpo1 >= 3) {
+            resultado.innerHTML += ` <br><i>Jogador 2</i> `
+            resultado.innerHTML += `<br><img src="https://jokenpo-lime.vercel.app/tesoura.png" alt="Tesoura" width="200px" height="200px">`
+        }
+
+        if (jokenpo <= 1 && jokenpo1 <= 1 || jokenpo >= 2 && jokenpo < 3 && jokenpo1 >= 2 && jokenpo1 < 3 || jokenpo >= 3 && jokenpo1 >= 3) {
+            resultado.innerHTML += ` <br><i>EMPATE! Jogue novamente!</i> `
+        } else if (jokenpo >1 && jokenpo <=2 && jokenpo1 >= 3) {
+            resultado.innerHTML += ` <br>Jogador 1 venceu porque Pedra quebra a tesoura</i> `
+        }  else if (jokenpo <=1 && jokenpo1 >= 2 && jokenpo1 < 3) {
+            resultado.innerHTML += ` <br>Jogador 1 venceu porque Papel cobre a pedra</i> `
+        }  else if (jokenpo >= 3 && jokenpo1 <= 1) {
+            resultado.innerHTML += ` <br>Jogador 1 venceu porque Tesoura corta o papel</i> `
+
+        }
+
+        if (jokenpo1 >1 && jokenpo1 <=2 && jokenpo >= 3) {
+            resultado2.innerHTML += ` <br>Jogador 2 venceu porque Pedra quebra a tesoura</i> `
+        }  else if (jokenpo1 <=1 && jokenpo >= 2 && jokenpo < 3) {
+            resultado2.innerHTML += ` <br>Jogador 2 venceu porque Papel cobre a pedra</i> `
+        }  else if (jokenpo1 >= 3 && jokenpo <= 1) {
+            resultado2.innerHTML += ` <br>Jogador 2 venceu porque Tesoura corta o papel</i> `
+        } 
+
+    }
+
+
+
+
+
+
+
+</script>
+
+
+
+
+<!--   if () {
+            resultado.innerHTML += ` <br><i>Jogador 1 venceu porque Pedra quebra a tesoura</i>`
+        } else if () {
+            resultado.innerHTML += ` <br><i>Jogador 1 venceu porque Papel cobre a pedra</i>`
+        } else if () {
+            resultado.innerHTML += ` <br><i>Jogador 1 venceu porque Tesoura corta o papel</i>`
+        } -->
+<!-- 11 (desafio). Crie um programa que simule 2 pessoas jogando "pedra papel tesoura".
+
+a)  Deve haver apenas um botão "Jogar". Ao clicar nele, devem ser sorteados um dos 3 valores possíveis do jogo para 2 jogadores.
+
+b) Os valores sorteados são ilustrados na tela com imagens (de uma pedra, de um papel ou de uma tesoura, claro). Essas imagens devem aparecer abaixo do botão e uma do lado da outra. Se possível, evite que a imagens fiquem "coladas", dando um espaço entre elas.
+
+c) Abaixo das imagens, caso os valores não sejam iguais, exiba a frase
+
+Jogador X venceu porque BLA
+
+Onde X é 1 ou 2, dependendo do jogador que vencer e BLA é a explicação, que pode ser:
+
+   Pedra quebra a tesoura
+
+   Papel cobre a pedra
+
+   Tesoura corta o papel
+
+Em caso de empate, exibir apenas a frase
+
+   EMPATE! Jogue novamente!
+ -->
