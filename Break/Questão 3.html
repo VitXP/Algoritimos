@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+
+<body>
+    <h2><i>Sorte no amor ou no jogo?</i></h2>
+    <button onclick="ver()">Ver minha sorte</button> <br>
+    <div id="resultado"></div> <br><br>
+    <div id="resultado2"></div> <br><br>
+
+</body>
+
+</html>
+<script>
+    function ver() {
+        resultado.innerHTML = ``
+        resultado2.innerHTML = ``
+        coracao = 0
+        cartas = 0
+
+        for (contador = 1; contador <= 21; contador++) {
+            var sorteio = parseInt(1 + Math.random() * 2)
+
+            console.log(`${contador} sorteado ${sorteio}`);
+
+            if (sorteio == 1) {
+                coracao++
+                resultado.innerHTML += `<img src="https://comofazeremcasa.net/wp-content/uploads/2019/11/desenho-de-coracao-2.jpg" alt="coracao" height="100px">`
+            }
+
+
+            if (sorteio == 2) {
+                cartas++
+                resultado.innerHTML += `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbTZFXfIEBXEeM0Vt8Gxr4TOQucGBLPuDmHg&usqp=CAU" alt="cartas" height="100px">`
+            }
+
+
+
+            if (coracao == 11) {
+                resultado2.innerHTML = `Você tem mais sorte no amor"`
+                break
+            } if (cartas == 11) {
+                resultado2.innerHTML = `Você tem mais sorte no jogo`
+                break
+            }
+        }
+    }
+
+
+</script>
+
+<!-- 3. (Desafio) Existe um dito popular que diz que se você tem sorte no amor tem azar no jogo e vice-versa. Assim, crie um programa o qual:
+
+a) Tenha um botão "Ver minha sorte".
+b) Ao ser clicado, ele exibe, no máximo*, 21 imagens, uma ao lado da outra. Essa imagens só podem ser ou de um coraçãozinho ou de uma carta de baralho (deixe todas na mesma altura para ficar mais bonito na tela)
+
+A distribuição das imagens é aleatória. Ao final serão, no máximo*, 21 imagens, entre corações e cartas, isso que importa
+
+c) Abaixo de todas a imagens, devem aparacer uma dessas mensagens:
+   "Você tem mais sorte no amor" caso tenham sido sorteados mais corações
+   "Você tem mais sorte no jogo" caso tenham sido sorteados mais cartas de baralho
+
+d) * - Porém... Caso o programa chegue a sortear 11 imagens de uma das 2 figuras antes de 21 sorteios, interrompa imediatamente os sorteios (já que já se sabe o resultado).  -->
