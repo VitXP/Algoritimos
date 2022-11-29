@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+
+<body>
+    <h1>Estágios da Vida</h1>
+    Insira a frequência do aluno: <input type="number" id="in_fre"> <br>
+    <button onclick="analisar()">Analisar frequência</button> <br><br>
+    <div id="resultado"></div> 
+</body>
+
+</html>
+<script>
+    function analisar() {
+        var frequencia = Number(in_fre.value)
+        frase = frequencia < 50 ? `<span><img src="https://st2.depositphotos.com/1801333/7078/v/600/depositphotos_70781431-stock-illustration-cartoon-tourist-with-map.jpg" alt="turista" width="200px" height="200px"></span>`
+        :
+        `<span><img src="https://img.freepik.com/vetores-premium/estudante-de-desenho-animado-desenhado-a-mao_29937-8733.jpg?w=2000" alt= "estudante"  width="200px" height="200px"></span>`
+        resultado.innerHTML = frase
+    }
+</script>
+
+<!-- 4. Crie um programa o qual:
+
+a) Solicita a frequência do aluno
+
+b) Ao clicar em "Analisar frequência", deve aparecer, abaixo dele:
+
+    A imagem de um turista, caso a frequência for menor que 50 OU
+    A imagem de um aluno estudioso, caso a frequência for a partir de 50
+
+
+
+4. Usando operador ternário, refaça a questão 4 da Lista"Exercícios - lista "if-else"" em https://moodle.sptech.school/mod/assign/view.php?id=8040.-->

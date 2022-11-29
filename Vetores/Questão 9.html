@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questão 9</title>
+</head>
+
+<body>
+  <h1>Projetos</h1>
+  Insira o nome de cada projeto<input type="text" id="in_projeto">
+  <button onclick="registrar()">Registrar projeto</button>
+  <button onclick="mostrar()">Mostrar Projetos</button> <br><br>
+  <div id="resultado"></div> <br><br>
+  <div id="resultado2"></div>
+</body>
+
+</html>
+<script>
+
+  projetos_armazem = []
+
+  function registrar() {
+    resultado.innerHTML = ``
+    projetos_armazem.push(in_projeto.value)
+
+    for (var i = 0; i < projetos_armazem.length; i++) {
+
+      if (i < 4) {
+        resultado2.innerHTML = ``
+        resultado2.innerHTML += `Você já fez ${i + 1} projetos. Por isso você é um profissional Junior.`
+      } else if (i < 12) {
+        resultado2.innerHTML = ``
+        resultado2.innerHTML += `Você já fez ${i + 1} projetos. Por isso você é um profissional Pleno desde o projeto ${projetos_armazem[4]}.`
+      } else {
+        resultado2.innerHTML = ``
+        resultado2.innerHTML += `Você já fez ${i + 1} projetos. Por isso você é um profissional Sênior desde o projeto ${projetos_armazem[12]}.`
+
+      }
+
+    }
+  }
+
+
+  function mostrar() {
+
+var projeto = in_projeto.value
+resultado.innerHTML = ''
+
+for (var indice = projetos_armazem.length - 1; indice >= 0; indice--) {
+
+    var atual = projetos_armazem[indice]
+
+    resultado.innerHTML += `${atual} <br>`
+}
+
+}
+
+</script>
+
+<!-- 
+9. a) Pergunte para o usuário o nome de cada projeto que já criou na vida. Ele digita e clica em "Registrar projeto". Na medida que ele vai cadastrando, verifique quantos projetos já foram cadastrados e exiba o seguinte texto abaixo:
+
+Você já fez X projetos. Por isso você é um profissional Z
+
+X é a quantidade de projetos e Z é seu nível de experiência, segundo estas regras:
+
+  0 a 4: Júnior
+
+  5 a 12: Pleno desde o projeto "nome do 5º projeto"
+
+    u mais: Sênior desde o projeto "nome do 13º projeto"
+
+b)  Tenha um botão “Mostrar Projetos” que quando clicado mostra os projetos cadastrados, um abaixo do outro, em ordem inversa ao que foi cadastrado.
+
+  -->

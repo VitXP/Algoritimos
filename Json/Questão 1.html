@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 1</title>
+</head>
+
+<body>
+
+    <h1>Produtos</h1>
+    Insira o nome do produto <input type="text" id="in_nome">
+    Insira o nome do preço <input type="number" id="in_preco">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="exibir()">Exibir</button><br>
+    Filtros:
+    <button onclick="filtrocaro()">Caros</button>
+    <button onclick="filtrobarato()">Baratos</button>
+    <button onclick="filtromedio()">20 á 30</button>
+    <button onclick="filtroimpar()">Impar</button>
+    <button onclick="filtropar()">Par</button><br>
+    
+    Filtrar por nome <input type="text" id="in_pesquisa_nome">
+    <button onclick="filtronome()">Filtrar por Nome</button>
+   
+
+    <div id="r"></div>
+
+</body>
+
+</html>
+<script>
+    var produtos = {
+        nome: [],
+        preco: [],
+    }
+
+    function cadastrar() {
+        var innome = in_nome.value
+        var inpreco = Number(in_preco.value)
+
+
+        produtos.nome.push(innome)
+        produtos.preco.push(inpreco)
+
+
+
+    }
+
+    function exibir() {
+        r.innerHTML = ``
+
+        for (var index = 0; index < produtos.nome.length; index++) {
+            var element = produtos[index];
+            r.innerHTML += `<br> nome: ${produtos.nome[index]}, preco: ${produtos.preco[index]}`
+        }
+    }
+
+
+    function filtrocaro() {
+        r.innerHTML = ``
+        var produtoscaro = []
+
+        for (var index = 0; index < produtos.preco.length; index++) {
+            if (produtos.preco[index] > 20) {
+                produtoscaro.push(produtos.preco[index]);
+                r.innerHTML += `<br> nome: ${produtos.nome[index]}, preco: ${produtos.preco[index]}`
+            }
+        }
+
+    }
+
+    function filtrobarato() {
+        r.innerHTML = ``
+        var produtosBaratos = []
+
+        for (var index = 0; index < produtos.preco.length; index++) {
+            if (produtos.preco[index] < 30) {
+                produtosBaratos.push(produtos.preco[index]);
+                r.innerHTML += `<br> nome: ${produtos.nome[index]}, preco: ${produtos.preco[index]}`
+            }
+        }
+
+    }
+
+    function filtromedio() {
+        r.innerHTML = ``
+        var produtosmedio = []
+
+        for (var index = 0; index < produtos.preco.length; index++) {
+            if (produtos.preco[index] > 20 && produtos.preco[index] < 30) {
+                produtosmedio.push(produtos.preco[index]);
+                r.innerHTML += `<br> nome: ${produtos.nome[index]}, preco: ${produtos.preco[index]}`
+            }
+        }
+
+    }
+
+    function filtronome() {
+        r.innerHTML = ``
+        var filtronome = in_pesquisa_nome.value
+        var nomefiltrados = []
+
+        for (var index = 0; index < produtos.preco.length; index++) {
+            if (produtos.nome[index] == filtronome) {
+                nomefiltrados.push(produtos.preco[index]);
+                r.innerHTML += `<br> nome: ${produtos.nome[index]}, preco: ${produtos.preco[index]}`
+            }
+        }
+
+    }
+
+    function filtroimpar() {
+        r.innerHTML = ``
+        r.innerHTML = ``
+        var impar = []
+
+        for (var index = 0; index < produtos.preco.length; index++) {
+            if (produtos.preco[index] % 2 == 1) {
+                impar.push(produtos.preco[index]);
+                r.innerHTML += `<br> nome: ${produtos.nome[index]}, preco: ${produtos.preco[index]}`
+            }
+        }
+    }
+
+    function filtropar() {
+        r.innerHTML = ``
+        r.innerHTML = ``
+        var par = []
+
+        for (var index = 0; index < produtos.preco.length; index++) {
+            if (produtos.preco[index] % 2 == 0) {
+                par.push(produtos.preco[index]);
+                r.innerHTML += `<br> nome: ${produtos.nome[index]}, preco: ${produtos.preco[index]}`
+            }
+        }
+    }
+
+    
+</script>

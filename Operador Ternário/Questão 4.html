@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+<body>
+    <h1>Mercado BOM DOCE</h1>
+    
+Solicite a quantidade de chocolates comprados <input type="number" id="in_Quantidade" >
+<button onclick="compra()">Comprar</button>
+<div id="resultado"></div>
+</body>
+</html>
+<script>
+    function compra() {
+
+        var quantidade = Number(in_Quantidade.value)
+        
+        frase = quantidade <= 12 ? `o valor da sua compra foi de ${(quantidade * 3.00).toFixed(2)}` : `o valor da sua compra foi de ${(quantidade * 2.50).toFixed(2)}`
+        resultado.innerHTML = frase
+    }
+</script>
+
+
+<!-- 
+3. O Mercado BOM DOCE está em promoção, qualquer chocolate custa R$ 3,00 cada e se a compra for acima de uma dúzia de chocolates o preço cai para R$ 2,50 cada um. Criar um programa que auxilie o Mercado a calcular o valor da compra de chocolate
+
+a) Solicite a quantidade de chocolates comprados;
+b) Após clicar num botão "Compra", exiba a mensagem "o valor da sua compra foi de xxxxxx,xx".   
+
+
+3. Usando operador ternário, refaça a questão 3 da Lista"Exercícios - lista "if-else"" em https://moodle.sptech.school/mod/assign/view.php?id=8040.
+
+-->

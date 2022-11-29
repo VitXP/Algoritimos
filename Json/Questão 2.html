@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+
+<body>
+    <div id="limpar">
+        <h1>Análise de performance de Alunos - Registro </h1>
+        Entre com o nome do aluno: <input type="text" id="in_nome"> <br>
+        Entre com a nota do aluno:<input type="number" id="in_nota"><br>
+        <button onclick="registrar()">Registrar</button>
+        <button onclick="analisar()">Analisar</button><BR><BR>
+        <div id="resultado"></div>
+
+        <h4><i>Filtros:</i></h4>
+        <select name="" id="sel_filtros">
+            <option value="1">Nome</option>
+            <option value="2">Nota maior que</option>
+            <option value="3">Nota menor que</option>
+        </select>
+
+        Insira o nome/nota desejado: <input type="text" id="in_valorfiltrado"><br><br>
+        <button onclick="filtro()">Aplicar Filtros</button>
+    </div>
+
+    <div id="resultado1"></div>
+    <div id="mostrar"></div>
+
+</body>
+
+</html>
+<script>
+
+
+    var total = 0
+
+    var aluno = {
+        nome: [],
+        nota: [],
+    }
+
+
+
+    function registrar() {
+        var nome = in_nome.value
+        var nota = Number(in_nota.value)
+        resultado.innerHTML = ``
+        resultado1.innerHTML = ``
+
+        if (nome == '') {
+            resultado.innerHTML = `Digite um nome para prosseguir<br>`
+        } else if (nota < 0 || nota > 10) {
+            resultado1.innerHTML = `A “nota” tem que estar entre 0 e 10<br>`
+        } else {
+            aluno.nome.push(nome)
+            aluno.nota.push(nota)
+            total++
+        }
+
+        for (i = aluno.nota.length; i > 0; i--) {
+            resultado1.innerHTML += `<br>nome: ${aluno.nome[i - 1]}
+            <br>nota: ${aluno.nota[i - 1]} <br>`
+        }
+    }
+
+
+    function filtro() {
+
+        resultado1.innerHTML = ``
+        resultado.innerHTML = ``
+
+        var filtros = sel_filtros.value
+        var nomefiltrados = []
+        var solicitado = in_valorfiltrado.value
+
+        if (filtros == 1) {
+            for (var i = 0; i < aluno.nota.length; i++) {
+                if (aluno.nome[i] == solicitado) {
+                    nomefiltrados.push(aluno.nome[i]);
+                    resultado1.innerHTML += `<br>nome: ${aluno.nome[i]}<br>nota: ${aluno.nota[i]} <br>`
+                }
+            }
+        }
+
+        if (filtros == 2) {
+            for (var i = 0; i < aluno.nota.length; i++) {
+                if (aluno.nota[i] > solicitado) {
+                    nomefiltrados.push(aluno.nota[i]);
+                    resultado1.innerHTML += `<br>nome: ${aluno.nome[i]}<br>nota: ${aluno.nota[i]} <br>`
+                }
+            }
+        }
+
+        if (filtros == 3) {
+            for (var i = 0; i < aluno.nota.length; i++) {
+                if (aluno.nota[i] < solicitado) {
+                    nomefiltrados.push(aluno.nota[i]);
+                    resultado1.innerHTML += `<br>nome: ${aluno.nome[i]}<br>nota: ${aluno.nota[i]} <br>`
+                }
+            }
+        }
+    }
+
+
+    function analisar() {
+        limpar.innerHTML = ``
+        resultado1.innerHTML = ``
+        mostrar.innerHTML = `<h1>Análise de performance de Alunos - Pesquisa</h1>
+         Entre com o intervalo de notas: <input type="number" id="in_de" placeholder="De"> <input type="number" id="in_ate" placeholder="Até"> 
+         <button onclick="pesquisar()">Pesquisar</button> 
+         <br><br>
+         <h4><i>Filtros:</i></h4>
+    <select name="" id="sel_filtros2">
+        <option value="1">Nome</option>
+        <option value="2">Nota maior que</option>
+        <option value="3">Nota menor que</option>
+    </select>
+
+    Insira o nome/nota desejado: <input type="text" id="in_valorfiltrado2">
+    <button onclick="filtrotwo()">Aplicar Filtros</button>
+    <br><br>
+           <br> <div id="resultado2"></div>
+           <br> <div id="resultado3"></div>`
+
+    }
+
+
+
+    function pesquisar() {
+
+        var de = Number(in_de.value)
+        var ate = Number(in_ate.value)
+        var listados = 0
+        resultado2.innerHTML = ``
+
+
+        if (ate == '') {
+            resultado2.innerHTML = `Digite um número nos campos para prosseguir`
+        } else if (de < 0 || de > 10) {
+            resultado2.innerHTML = `O campo “de” tem que estar entre 0 e 10,`
+        } else if (ate < 0 || ate > 10) {
+            resultado2.innerHTML = `O campo “ate” tem que estar entre 0 e 10,`
+        } else if (de > ate) {
+            resultado2.innerHTML = `o campo “de” tem que ser menor ou igual ao campo “até”`
+        } else {
+            resultado2.innerHTML = ``
+            resultado2.innerHTML = ``
+
+            var alunosfiltrados = []
+
+            for (var index = 0; index < aluno.nota.length; index++) {
+                if (aluno.nota[index] >= de && aluno.nota[index] <= ate) {
+                    alunosfiltrados.push(aluno[index]);
+                    resultado2.innerHTML += `<br> nome: ${aluno.nome[index]}, preco: ${aluno.nota[index]}`
+
+                    var maior = 0;
+                    for (var i = 0; i < aluno.nota.length; i++) {
+                        if (aluno.nota[i] > maior) {
+                            maior = aluno.nota[i];
+                        }
+                    }
+
+                    var menor = 10;
+                    for (var i = 0; i < aluno.nota.length; i++) {
+                        if (aluno.nota[i] < menor) {
+                            menor = aluno.nota[i];
+                        }
+                    }
+
+                    var soma = 0
+                    for (var i = 0; i < aluno.nota.length; i++) {
+                        soma = soma + aluno.nota[i];
+                    }
+
+                }
+            }
+
+
+            resultado2.innerHTML += `<br><br>Total de alunos registrados: ${total}
+            <br>Total de alunos listado: ${alunosfiltrados.length}
+
+            <br>Maior Nota = ${maior}
+
+            <br>Menor Nota = ${menor}
+
+            <br>Média da Nota = ${(soma / alunosfiltrados.length).toFixed(2)}`
+
+        }
+    }
+
+    function filtrotwo() {
+
+        resultado3.innerHTML = ``
+
+        var listadefiltros = sel_filtros2.value
+        var nomefiltrados = []
+        var solicitado = in_valorfiltrado2.value
+
+        if (listadefiltros == 1) {
+            for (var i = 0; i < aluno.nota.length; i++) {
+                if (aluno.nome[i] == solicitado) {
+                    nomefiltrados.push(aluno.nome[i]);
+                    resultado3.innerHTML += `<br>nome: ${aluno.nome[i]}<br>nota: ${aluno.nota[i]} <br>`
+                }
+            }
+        }
+
+        if (listadefiltros == 2) {
+            for (var i = 0; i < aluno.nota.length; i++) {
+                if (aluno.nota[i] > solicitado) {
+                    nomefiltrados.push(aluno.nota[i]);
+                    resultado3.innerHTML += `<br>nome: ${aluno.nome[i]}<br>nota: ${aluno.nota[i]} <br>`
+                }
+            }
+        }
+
+        if (listadefiltros == 3) {
+            for (var i = 0; i < aluno.nota.length; i++) {
+                if (aluno.nota[i] < solicitado) {
+                    nomefiltrados.push(aluno.nota[i]);
+                    resultado3.innerHTML += `<br>nome: ${aluno.nome[i]}<br>nota: ${aluno.nota[i]} <br>`
+                }
+            }
+        }
+    }
+
+
+
+</script>
+
+<!-- Exercício
+1) A professora Alice precisa de um programa que auxilie na análise de performance de sua turma. 
+
+Parte-1
+
+Tenha uma tela parecida com a abaixo
+Interface gráfica do usuário, Aplicativo
+
+Descrição gerada automaticamente
+
+Interface gráfica do usuário, Aplicativo
+
+Descrição gerada automaticamente
+
+ 
+
+Quando o botão “Registrar” for clicado:
+
+    validar os campos de entrada sendo que o “nome” tem que estar preenchido e a “nota” tem que estar entre 0 e 10, em caso de erro emitir mensagem explicativa e não seguir em frente.
+
+    guardar os dados (por exemplo em vetor);
+
+    listar abaixo dos botões todas as informações guardadas, só que em ordem inversa a que foi cadastrada.
+
+
+Quando o botão “Analisar” for clicado, limpar todos os elementos da Parte-1 e executar a Parte-2.
+
+ 
+
+Parte-2
+
+Tenha uma tela parecida com a abaixo
+Interface gráfica do usuário
+
+Descrição gerada automaticamente
+
+Interface gráfica do usuário
+
+Descrição gerada automaticamente
+
+Quando o botão “Pesquisar” for clicado:
+
+    validar o intervalo de pesquisa, sendo que o campo “de” tem que estar entre 0 e 10, o campo “até” tem que estar entre 0 e 10 e o campo “de” tem que ser menor ou igual ao campo “até”. Em caso de erro emitir mensagem explicativa e não seguir em frente.
+
+    listar todos os alunos com nota entre o intervalo informado da seguinte forma: “O aluno xxxxxxx ficou com a nota 99,9”
+
+    abaixo da relação de alunos emitir o resumo da seguinte forma:
+
+Total de alunos registrados: 999
+
+Total de alunos listado: 999 (com nota no intervalo informado)
+
+Maior Nota = 99,9
+
+Menor Nota = 99,9
+
+Média da Nota = 99,9
+
+
+
+
+Parte-3
+
+UTILIZE JSON PARA CADASTRAR OS ALUNOS NESSA PARTE 3.
+
+Adicione uma lista suspensa (select) para aplicar filtros, com as opções "Nome", "Nota maior que", "Nota menor que".
+
+Adicione uma input para o usuário inserir o valor desejado para ser filtrado.
+
+Ao clicar em "Aplicar Filtros", deve realizar uma busca com base no filtro aplicado, listando somente os elementos que sejam compatíveis com o filtro.
+
+Caso o usuário tenha informado um intervalo de notas (parte 2), os filtros devem ser aplicados com base nesse intervalo.
+
+Ao final, deve continuar exibindo a relação de alunos, como: 
+
+
+
+Exemplo de Funcionamento: 
+
+
+
+Opção "Nota maior que" selecionado na combo, 
+
+Valor "6" inserido na input
+
+Deve listar todas as notas que sejam 6 ou maior.
+
+
+
+Total de alunos registrados: 999
+
+Total de alunos listado: 999 (com nota no intervalo informado)
+
+Maior Nota = 99,9
+
+Menor Nota = 99,9
+
+Média da Nota = 99,9
+
+
+   -->
